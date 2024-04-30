@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+  <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+  <script src="../jquery-3.7.1.js"></script>
+  <style>
+    span.material-symbols-outlined {
+      vertical-align: text-bottom;
+    }
+  </style>
+  <script>
+
+    // $(document).ready(function () {
+    $(function () {
+      $("button").on("click", function () {
+        $("#demo").html("버튼 클릭!!!");
+      });
+    })
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+        style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt="">
+    </h1>
+    <ul>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </header>
+  <div>
+    <xmp class="code">
+      1. jquery ?
+      1) jQuery는 빠르고 작으며 기능이 풍부한
+      JavaScript 라이브러리입니다.
+      2) 다양한 브라우저에서 작동하는 사용하기
+      쉬운 API를 통해
+      HTML 문서 탐색 및 조작, 이벤트 처리,
+      애니메이션, Ajax 등을 훨씬 간단하게 만듭니다.
+      3) 다용성과 확장성을 결합한 jQuery는
+      수백만 명의 사람들이 JavaScript를
+      작성하는 방식을 변화시켰습니다.
+      2. jquery 사용하는 방법 ?
+      1) jQuery 파일의 압축 및
+      비압축 복사본을 사용할 수 있습니다.
+
+      압축되지 않은 파일은 [개발이나 디버깅] 중에
+      사용하는 것이 가장 좋습니다.
+
+      압축된 파일은 대역폭을 절약하고
+      프로덕션 성능을 향상시킵니다.
+      2) CDN(Content delivery network) 은 전 세계에
+      분산된 서버에서 jQuery를 호스팅하여
+      성능상의 이점을 제공할 수 있습니다
+
+      3. jquery 사용하는 구문(형식)
+      $(jquery selector).action()
+      선택자
+    </xmp>
+    <button> 확인 </button>
+    <p id="demo"></p>
+  </div>
+
+
+
+  <script>
+    $.noConflict();
+    jQuery(document).ready(function($){
+      $("#demo").html("XXX");
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+		}
+
+		/* 1점 */
+		div {
+			border: 1px solid gray;
+			width: 200px;
+			padding: 10px;
+			background-color: rgba(0, 255, 0, 0.1);
+		}
+
+		/* 1 + 10 = 11점 */
+		div.first {
+			/* 투명도 속성 0~1 */
+			/* 자식 요소도 동일한 투명도를 상속받는다. */
+			opacity: 0.5;
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="first">Lorem ipsum dolor.</div>
+	<div>Lorem ipsum dolor.</div>
+	<div>Accusantium nobis voluptates.</div>
+	<div>Sint praesentium rerum?</div>
+	<div>Voluptate laboriosam assumenda!</div>
+</body>
+
+</html>

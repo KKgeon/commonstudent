@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            for~of문 : array, set, string, map 반복 가능한 객체를 반복적으로 처리하는 문
+            for(let/const 변수명 of 반복객체)
+        </xmp>
+    </div>
+
+    <script>
+        //for in 반복문
+        //*** for of 반복문 ***
+        const array1 = ['a', 'b', 'c'];
+
+        for (const element of array1) {
+            console.log(element);
+        }
+
+        // Expected output: "a"
+        // Expected output: "b"
+        // Expected output: "c"
+
+
+
+
+        ///////////////////////////////////////////////////////////////
+        let iterablestring = "boo";
+
+        for (let value of iterable) {
+            console.log(value);
+        }
+        // "b"
+        // "o"
+        // "o"
+
+
+
+
+        ///////////////////////////////////////////////////////////////
+        let iterablemap = new Map([
+            ["a", 1],
+            ["b", 2],
+            ["c", 3],
+        ]);
+
+        for (let entry of iterable) {
+            console.log(entry);
+        }
+        // [a, 1]
+        // [b, 2]
+        // [c, 3]
+
+        for (let [key, value] of iterable) {
+            console.log(value);
+        }
+        // 1
+        // 2
+        // 3
+    </script>
+</body>
+
+</html>

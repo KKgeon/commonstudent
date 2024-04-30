@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+
+    call() : 다른 객체의 메서드를 불러서 처리할 수 있는 함수
+    apply() : 다른 객체의 메서드를 불러서 처리할 수 있는 함수
+
+    차이점 : 매개변수가 있는 경우
+        ㄴ call() - 매개변수 나열
+        ㄴ apply() - 매개변수를 배열로 만들어서 사용.
+  </xmp>
+</div>
+
+
+<script>
+    let person = {
+        print:function(){
+            return this.name+ " / " + this.age;
+        },
+        printf:function(city,eyeColor){
+            return `$(this.name) /
+                    $(this.age) /
+                    $(city) /
+                    $(eyeColor)`;
+        }
+    }
+
+    let person1 = {
+        name:"hong",
+        age:20,
+        // print:function(){
+        //     return this.name+ " / " + this.age;
+        // }
+    };
+    let person2 = {
+        name:"admin",
+        age:40,
+        // print:function(){
+        //     return this.name+ " / " + this.age;
+        // }
+    };
+
+
+    person.print.call(person1);
+    person.printf.call(person1,"seoul", "blue");
+    
+    
+
+    let params = ["seoul", "blue"]
+
+    person.print.apply(person1,params);
+    // 500명 person3,4,5,6~500
+
+    // 각 객체의 print() 메서드를 호출
+    // alert(person1.print());
+    // alert(person2.print());
+</script>
+
+<script>
+    const m = [3,5,2,4,1];
+    let max = Math.max.apply(null, m);
+</script>
+
+<script>
+    // bind() 묶다. 감싸다
+    // 다른 객체의 메서드를 내 객체에 묶다
+    let result = person.print.bind(person1)();
+    alert(result);
+</script>
+</body>
+</html>

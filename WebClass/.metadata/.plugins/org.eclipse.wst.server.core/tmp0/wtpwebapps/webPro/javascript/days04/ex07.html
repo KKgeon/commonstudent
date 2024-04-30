@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <table id="tblDept">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" class="all"> 모두 선택</th>
+                    <th>Name</th>
+                    <th>Loc</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="ck1"></td>
+                    <td>Quam.</td>
+                    <td>Sapiente.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="ck2" data-name='Consequatur!'></td>
+                    <td>Consequatur!</td>
+                    <td>Nisi.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="ck3"></td>
+                    <td>Tenetur!</td>
+                    <td>Modi.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="ck4"></td>
+                    <td>Earum.</td>
+                    <td>Officiis.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button>선택 확인</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p id="demo"></p>
+    </div>
+    <script>
+        let pdemo = document.querySelector("#demo");
+        let allCkb = document.querySelector("#tblDept>thead input.all");
+        let ckbs = document.querySelectorAll("#tblDept>tbody input[id^='ck']");
+
+        allCkb.onclick = function () {
+            // alert(this.checked);
+            for (let i = 0; i < ckbs.length; i++) {
+                ckbs[i].checked = this.checked;
+            }//for
+        }
+        for (let i = 0; i < ckbs.length; i++) {
+            ckbs[i].onclick = function () {
+                let isCkbsAllChecked = true;
+                for (let i = 0; i < ckbs.length; i++) {
+                    isCkbsAllChecked = ckbs[i].checked; //false
+                    if (!isCkbsAllChecked) break;
+                }//forin
+
+                allCkb.checked = isCkbsAllChecked;
+            }//click
+        }//for
+
+        let content = "<ul>";
+
+        document.querySelector("tfoot button").onclick = function () {
+            for (let i = 0; i < ckbs.length; i++) {
+                const ckb = ckbs[i];
+                if (ckb.checked) {
+                    content += `<li>${ckb.id}</li>`;
+
+                }//if
+
+            }//for
+            content += "</ul>";
+            pdemo.innerHTML = content;
+        };
+    </script>
+</body>
+
+</html>

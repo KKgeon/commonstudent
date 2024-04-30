@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+h3{
+background-color: yellow;
+}
+h3:first-letter {
+	color: red;
+	font-size: xx-large;
+}
+h3::after {
+	content:"~~~";
+}
+h3::before {
+	content:url(../images/SiSt.ico);
+}
+
+div#section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<!-- 
+의사 = 가짜라는 뜻
+: 의사 클래스 - a:hover
+:: 의사 요소
+	ㄴ 	요소의 지저오딘 부분에 스타일을 지정하는 데 사용
+	ㄴ	요소의 첫 글자 또는 첫 줄 스타일 지정
+	ㄴ	요소의 내용(content) 앞 또는 뒤에
+		다른 내용(content) 삽입
+ -->
+<h3>Lorem ipsum dolor sit amet.</h3>
+<h3>Praesentium minima recusandae vero iusto?</h3>
+<h3>Architecto consequuntur repudiandae expedita dolorem.</h3>
+</body>
+</html>

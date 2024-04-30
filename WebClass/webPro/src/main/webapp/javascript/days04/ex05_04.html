@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <div style="display: flex; justify-content: space-around;">
+            <input type="text" autofocus="autofocus">
+            <!-- + -->
+            <select name="operator" id="operator">
+                <option value="">선택</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                <option value="**">**</option>
+
+            </select>
+            <input type="text">
+            =
+            <input type="text" disabled="disabled">
+        </div>
+    </div>
+
+    <script>
+
+        $(":text").first().on("keydown", function (event) {
+            if (event.which == 13) {
+                //js regex 정규표현식
+                const regexp = /^\d/+$; //[0-9]
+                if (regexp.test($(this).val())) {
+                    $(this).next().next().focus();
+                    n1 = parseInt($(this.val()))
+
+                } else{
+                    $(this).select();
+                }
+
+            }//if
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [js 함수 클로저(closures == 폐쇄, 폐점)]
+        ㄴ 함수 내에서 폐쇄
+        
+        변수
+        지역변수
+        
+    1. js 변수
+        ㄱ. function scope
+            함수 호출되면 지역변수 생성/완료 제거
+        ㄴ. block score
+            그 블럭을 빠져나오면 지역변수 제거
+    2. 전역변수(global scope)
+        ㄱ. 다른 웹 페이지로 이동
+        창 닫을 때까지 유지되는 변수
+        
+  </xmp>
+</div>
+<script>
+    let name; //전역변수
+    function test(n){//지역변수
+        let age = 20; //지역변수
+
+
+        // let, const, var 키워드 사용하지않고 변수를 사용하면
+        // 전역 변수가 된다.
+        addr = "집주소";
+
+    }
+
+
+function test2(){
+    addr="집주소2";
+    name = "홍길동";
+}
+</script>
+</body>
+</html>

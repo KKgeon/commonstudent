@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            [js 중첩 함수 이해]
+            ㄴ 함수 안에
+            ㄴ 함수
+            1. 모든 함수에서 전역변수를 접근 가능.
+            2. js에서는 모든 함수가 상위범위에 접근할 수 잇다.
+
+        </xmp>
+        <button>count!!</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        /*
+        //[2]
+        function add() {
+            let counter = 0;//지역변수
+            // 중첩 함수 선언
+
+            function plus() {
+                counter += 1;
+
+            }
+            plus();
+            return counter;
+        }
+
+
+
+        $("button").on("click", function () {
+            //add()=>plus()=>counter 1증가/리턴.
+            $("#demo").html(add());
+        });
+        */
+    </script>
+
+
+    <script>
+        // add() 호출 X --폐쇄
+        //  만약에  중첩 함수 plus() 호출가능...
+        // add() counter 지역변수 -- 폐쇄.
+
+    </script>
+    <script>
+        // add() X 폐쇄 - 자체 호출 함수 이용.
+        let plus = (function () { //add() 역할 하는 익명 함수
+            let counter = 0;
+
+            return function () {
+                counter += 1;
+                return counter;
+            }
+        })();
+
+        $("button").on("click", function () {
+            $("#demo").html(plus());
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+package days06.mvc.command;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.util.ConnectionProvider;
+import com.util.DBConn;
+
+import days06.mvc.domain.BoardDTO;
+import days06.mvc.persistence.BoardDAOImpl;
+
+public class EditHandler implements CommandHandler {
+
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		String method = request.getMethod();
+		
+		if (method.equals("GET")) {//Edit.java doGet()복사+붙이기
+			return "/days06/board/write.jsp";
+		} else {//Edit.java doPost() 복사+붙이기
+			
+		}
+		
+		return null;
+	}
+
+}

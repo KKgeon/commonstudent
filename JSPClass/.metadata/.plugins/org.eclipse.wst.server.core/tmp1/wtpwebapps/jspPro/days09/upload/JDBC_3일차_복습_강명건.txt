@@ -1,0 +1,45 @@
+[문제]
+ 
+		/*
+		[실행결과]
+ACCOUNTING(10)-3명
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+RESEARCH(20)-3명
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+SALES(30)-6명
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+  empno ename hiredate pay
+OPERATIONS(40)-1명
+  empno ename hiredate pay 
+NULL - 1명
+  empno ename hiredate pay
+       */
+       
+
+
+ACCOUNTING(10)-00명
+	  7782 	      CLARK 	  1981-06-09 	 2450.00
+	  7934 	     MILLER 	  1982-01-23 	 1300.00
+RESEARCH(20)-00명
+	  7369 	      SMITH 	  1980-12-17 	 800.00
+	  7566 	      JONES 	  1981-04-02 	 2975.00
+	  7902 	       FORD 	  1981-12-03 	 3000.00
+SALES(30)-00명
+	  7499 	      ALLEN 	  1981-02-20 	 1900.00
+	  7521 	       WARD 	  1981-02-22 	 1750.00
+	  7654 	     MARTIN 	  1981-09-28 	 2650.00
+	  7698 	      BLAKE 	  1981-05-01 	 2850.00
+	  7844 	     TURNER 	  1981-09-08 	 1500.00
+	  7900 	      JAMES 	  1981-12-03 	 950.00
+OPERATIONS(40)-00명
+	  9999 	         동영 	  2017-01-01 	 1100.00
+null(0)-00명
+	  9999 	         동영 	  2017-01-01 	 1100.00       

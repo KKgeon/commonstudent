@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            color: blue;
+            background-color: lightgray;
+        }
+
+        h3 {
+            color: white;
+            background-color: black;
+            /* 텍스트의 가로 정렬 */
+            text-align: center;
+        }
+
+        div {
+            color: red;
+            /* 텍스트의 방향 */
+            direction: rtl;
+        }
+
+        p#p1 {
+            border: 1px solid black;
+            padding: 5px;
+            width: 250px;
+            height: 100px;
+
+            /* 출력되는 텍스트의 행의 끝을 나란히 맞추겠다. */
+            /* 정당화시키다. */
+            text-align: justify;
+            overflow: hidden;
+        }
+    </style>
+
+    <style>
+        /* 텍스트에 이미지에서의 수직 정렬 */
+        img.a {
+            vertical-align: baseline;
+        }
+
+        img.b {
+            vertical-align: text-top;
+        }
+
+        img.c {
+            vertical-align: text-bottom;
+        }
+
+        img.d {
+            vertical-align: sub;
+        }
+
+        img.e {
+            vertical-align: super;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CSS 텍스트</h3>
+    <pre>
+    [CSS 텍스트 서식 지정]
+    1. 색상 : 표준 색상, 16진수, rgb()
+    2. 정렬
+        text-align
+        text-align-last
+        direction
+        unicode-bidi
+        vertical-align
+</pre>
+
+    <div>Lorem ipsum dolor sit amet.</div>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita recusandae quae quas consequatur earum
+        ducimus, nam incidunt, consectetur soluta sit corrupti suscipit facere quibusdam praesentium cum. Inventore
+        omnis similique impedit.</p>
+
+    <p>Lorem <img src="../images/sqpurple.gif" class="a" style="width:9px;height:9px" alt="" />ipsum dolor sit amet.</p>
+    <p>Error velit <img src="../images/sqpurple.gif" class="b" style="width:9px;height:9px" alt="" />dolor omnis ipsam.
+    </p>
+    <p>Libero unde provident<img src="../images/sqpurple.gif" class="c" style="width:9px;height:9px" alt="" /> eum
+        omnis!</p>
+    <p>Possimus assumenda tempora <img src="../images/sqpurple.gif" class="d" style="width:9px;height:9px"
+            alt="" />nostrum ipsum!</p>
+    <p>Aliquam delectus voluptates illum <img src="../images/sqpurple.gif" class="e" style="width:9px;height:9px"
+            alt="" />molestiae.</p>
+</body>
+
+</html>

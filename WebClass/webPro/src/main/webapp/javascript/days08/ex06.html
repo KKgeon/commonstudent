@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+  </xmp>
+
+  <a onclick="return test();" href="http://www.naver.com">naver</a>
+  <br>
+  <a onclick="return test2();" href="http://www.sist.co.kr">sist</a>
+  
+</div>
+
+<script>
+    function test(){
+        alert("test()...");
+
+        // a링크 태그의 기본기능이 제거 X
+        return false; //기본 이벤트 취소
+    }
+    function test2(){
+        alert("test2()...");
+        //
+        //기본이벤트 취소 메서드
+        event.preventDefault();
+
+        //event.stopPropagation()
+        //  멈춘다. [전파]
+        // 이벤트 버블링
+    }
+
+    
+</script>
+</body>
+</html>

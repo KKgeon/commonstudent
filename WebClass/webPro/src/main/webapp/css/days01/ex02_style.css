@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+p#first{/* 3. #아이디명+태그명 을 선택자로 사용 100 + 1점 */
+color: aqua;
+}
+
+
+#first{/* 2. #아이디명을 선택자로 사용 100점 */
+color: green;
+}
+
+
+
+p { /* 1. 태그명이 선택자로 사용 1점 */
+	color: red;
+	text-align: center;
+}
+
+p { /* CSS 우선 순위 */
+	color: blue;
+}
+p.last{ /* 1점+10점  */
+background-color: green;
+}
+
+
+.last{ /* 클래스명은 10점 */
+background-color: yellow;
+}

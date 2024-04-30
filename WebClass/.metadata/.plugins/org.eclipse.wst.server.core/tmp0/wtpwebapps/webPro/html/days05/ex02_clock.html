@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/favicon.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body onload="clockShow()" onunload="">
+
+	<div id="clock"
+		style="text-align: center; font-size: 20px; width: 10em;"></div>
+	<script>
+		function clockShow() {
+			// 			let clockDiv = document.getElementById("clock");
+			// #clock
+// 			#newsstand > div.MediaView-module__media_area___Z4js3 > div > div.MediaSubscriptionView-module__subscription_group___peb21 > div:nth-child(4) > a > img
+			let clockDiv = document.querySelector("body div#clock")
+			// alert("load 이벤트 발생")
+			// var let const 키워드
+			let now = new Date();
+
+			let mt = now.getMonth() + 1;
+			let dy = now.getDate();
+
+			let h = now.getHours();
+			let m = now.getMinutes();
+			let s = now.getSeconds();
+
+			// 			if (h >= 12)
+			// 			clockDiv.innerText = "<b>" + mt + "</b>/" + "<b>" + dy + "</b>"+ " " + h + ":"+ m + ":"+ s ;
+			clockDiv.innerHTML = "<b>" + mt + "</b>/" + "<b>" + dy + "</b>"
+					+ " " + h + ":" + m + ":" + s;
+
+			// 1초 후에 다시 clockShow() - 재귀함수 1초마다 clockShow() 무한적호출
+			// 1000ms 지난 후에 등록된 함수를 호출
+			setTimeout(clockShow, 1000);
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+
+        .style {
+            color: red;
+            display: inline-block;
+            width: 200px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            javascript / java 완전히 다른 언어.
+            javascript(1995)
+            1997년 표준화 공식 명칭 ECMA-262
+            (ECMAScript 공식 이름)
+        </xmp>
+
+        <fieldset>
+            <legend>
+                html 적용 여부
+            </legend>
+            <form action="">
+                <input type="radio" name="htmlApply" id="hyes" checked="checked">
+                <label for="hyes">적용</label>
+                <input type="radio" name="htmlApply" id="hno">
+                <label for="hno">미적용</label>
+                <br>
+                <input type="text" id="message" class="long" value="<span class='style'>홍길동</span>">
+                <br>
+                <button type="button">실행(exec)</button>
+            </form>
+        </fieldset>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        $("button").on("click", function () {
+            //jq수정
+            let radioList = $("fieldset>form>input[type=radio]");
+
+            // radioList.each(function(index, element){
+            //     console.log(index+"/" + element.checked);
+            // });
+
+
+            let message = $("#message").val();
+            let demo = $("#demo");
+            if ($("#hyes").prop("checked")) {
+                demo.html(message);
+            } else {
+                demo.text(message);
+
+            }
+        });//클릭 닫기
+    </script>
+</body>
+
+</html>

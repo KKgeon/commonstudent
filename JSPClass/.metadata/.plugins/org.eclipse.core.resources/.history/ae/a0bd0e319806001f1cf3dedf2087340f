@@ -1,0 +1,6 @@
+package days09;
+//싱글톤
+public class FileTestDAO {
+	
+	private static FileTestDAO dao = null;
+}//class

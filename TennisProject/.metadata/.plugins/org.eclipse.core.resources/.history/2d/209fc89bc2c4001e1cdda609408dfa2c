@@ -1,0 +1,28 @@
+package tennis;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Tenis extends GameMethod {//메인 클래스. 만들어둔 함수를 여기서 사용함.
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		GameMethod g = new GameMethod();
+		Player p = new Player();
+		int set = g.getSet();
+		boolean mode = g.getMode();
+		Random rnd = new Random();
+		//ArrayList <String> team1totalscore = new ArrayList <String>();
+		boolean a= true;
+		int test = sc.nextInt();
+
+
+		String [][] playername = p.Inputplayer(mode);
+		p.getteam1player(playername);
+		p.getteam2player(playername);
+
+		while(a) {
+			g.pointWinner(test, set);
+		}
+	}
+}
+

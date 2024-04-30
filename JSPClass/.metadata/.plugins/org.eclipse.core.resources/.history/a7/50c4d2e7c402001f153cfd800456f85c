@@ -1,0 +1,15 @@
+package days06.mvc.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+//list.do(글목록)-> [M]VC
+public class ListHandler implements CommandHandler {
+
+	@Override
+	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// 결과물 저장
+		// request.setAttribute("list", list);
+		return "/board/list.do";// "list.jsp"
+	}
+
+}

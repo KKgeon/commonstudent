@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .center {
+            border: 3px solid #72ad21;
+            width: 50%;
+            height: 200px;
+            text-align: center;
+            
+            position: relative;
+
+            margin: auto;
+
+        }
+        .center p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: 0;
+            background-color: yellow;
+
+            /* 변형시키다. 좌표(변환)*/
+            /* 번역하다 */
+            transform: translate(-50%,-50%);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>세로(수직) 정렬-수직 중심 위치, transform</h3>
+
+    <div class="center">
+        <p>hello world!</p>
+    </div>
+
+    
+</body>
+
+</html>

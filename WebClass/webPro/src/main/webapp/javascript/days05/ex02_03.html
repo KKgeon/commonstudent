@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [js 문자열 메서드]
+    java 문자열 속에 일부 문자열을 추출하는 메서드 substring
+    js      ?
+    1) slice()
+    2) substring()
+    3) substr()
+  </xmp>
+</div>
+
+<script>
+    let rrn = "891223-1700014";
+
+    // y
+    // m
+    // d
+    let y = rrn.slice(0,2);
+    // alert(y);//89
+    let m = rrn.substring(0,2);
+    // alert(m);//89
+    // alert(rrn.slice(7));
+    // alert(rrn.slice(-7,-5));//17
+    
+
+    </script>
+
+    <script>
+        let no = 5;
+        // alert(no.padStart(4,"0"));
+
+
+        // let line = "-";
+        // alert(line.repeat(10));
+    </script>
+
+
+<script>
+    let msg = "홍길동 아녕하세요. 홍길동 입니다.";
+
+    // let c_msg = msg.replace("홍길동", "XXX");
+    let c_msg = msg.replace(/홍길동/g, "XXX");
+    // let c_msg = msg.replaceAll("홍길동", "XXX");
+    alert(c_msg);
+</script>
+</body>
+</html>

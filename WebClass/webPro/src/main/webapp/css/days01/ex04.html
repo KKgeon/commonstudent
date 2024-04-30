@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+/* 모든 html 요소 == 범용선택자 */
+*{
+padding: 20px; /* 안쪽여백 */
+}
+
+/* 그룹화선택자 */
+h1,h2,h3,h4,h5,h6{
+border: 1px solid gray;}
+</style>
+<style>
+
+/* 링크 4가지 상태 : 의사클래스
+	1. 방문하지 않은 상태			: link
+	2. 한번이라도 방문을 한 상태 	: visited
+	3. 사용자 마우스 올려놓은 상태	: hover
+	4. 클릭한 상태 				: active
+ */
+ a:link{
+ color: red;
+ background-color: yellow;
+ text-decoration: none;
+ padding:14px 25px;
+ display:inline-block;
+ text-align: center;
+ }
+ a:visited{
+ color:green;
+ background: cyan;
+ text-decoration: none;
+ }
+ a:hover{
+  color:hotpink;
+ background: lightgreen;
+ text-decoration: none;
+ }
+ a:active{
+ color:blue;
+ background: hotpink;
+ text-decoration: underline;
+ }
+ 
+</style>
+
+<style>
+div {
+	border: 1px solid red;
+	
+}
+p {
+	border: 1px solid blue;
+}
+ /* div 부모 요소 안에 있는 모든 후손 a */
+/* 
+div a{
+	font-size: 40px;
+	color: black;
+} */
+ /* div 부모 요소 안에 있는 직계 후손 a */
+div > a{
+	font-size: 40px;
+	color: black;
+}
+
+
+div + p{
+background-color: red;
+}
+p~div{
+border-width: 10px;
+}
+</style>
+</head>
+<body>
+<pre>
+	[선택자]
+	1) 단순선택자 : 태그명, 클래스명, ID, 그룹화선택자, 범용선택자
+	2) 조합선택자 : 요소 간의 특정 관계를 기반으로 요소.
+		ㄱ. 요소 요소
+		ㄴ. 요소>요소
+		ㄷ. 요소+요소
+		ㄹ. 요소~요소
+</pre>
+
+<a href="">Lorem.</a>
+<a href="">Deserunt!</a>
+<a href="">Architecto!</a>
+
+
+<div>
+	<a href="#">XXX</a>
+	<p>222<a href="#">YYY</a></p>
+</div>
+
+<p id="p1" class="second">Lorem.</p>
+<p id="p2" class="second">Lorem.</p>
+
+<div>Lorem.</div>
+
+<div class="second">ZZZ</div>
+<div>Lorem.</div>
+</body>
+</html>

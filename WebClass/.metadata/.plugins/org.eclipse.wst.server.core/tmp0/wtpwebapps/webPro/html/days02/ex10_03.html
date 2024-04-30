@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/favicon.ico">
+<script>
+	// js 주석처리
+	// java 메서드 선언 접 지 리자 메서드명(매개변수){}
+	function myAlert(message) {
+		window.alert(message);
+	}
+	function bookmark() {
+		// (암기)
+		// js 사용해서 페이지를 이동
+		var url = "http://localhost/webPro/html/days02/ex10_02.html#desc";
+
+		// BOM
+		// window.location.href = url;
+		location.href = url;
+	}
+</script>
+</head>
+<body>
+	<pre>
+[a 링크 태그]
+ - js 처리 : 경고창 띄우기
+ - js 내장된 브라우저 객체BOM: window 객체
+ - js "문자열"
+ </pre>
+
+	<a href='javascript:window.alert("경고창 메세지");'> 경고창 띄우기. </a>
+	<br>
+
+
+	<a href='javascript:alert("경고창 메세지 윈도우지운거");'> 경고창 띄우기. 윈도우지운거 </a>
+	<br>
+
+	<a href='javascript:myAlert("내가만든자바스크립트함수()로 경고창띄우기");'>
+		내가만든자바스크립트함수()로 경고창띄우기 </a>
+	<br>
+
+	<a href='javascript:bookmark();'> 북마크 구현 설명[이동] </a>
+	<br>
+
+
+	<a href="mailto:admin@sist.com">관리자에게 메일 보내기</a>
+</body>
+</html>

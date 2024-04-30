@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    match()
+        ㄴ 문자열, 정규표현식을 기준으로 일치하는 결과가 포함된 배열을 리턴하는 함수
+
+    matchAll()
+        ㄴ  문자열, 정규표현식을 기준으로 일치하는 결과가 포함된 반복자를 리턴하는 함수
+  </xmp>
+</div>
+
+<script>
+    //g옵션을 추가하지 않으면
+    //일치하는 첫번째를 반환
+    let text = "The rain in SPAIN stays mainly in the plain";
+    // let searchString = "ain";
+    let searchString = /ain/gi;
+    const arr = text.match(searchString);
+    // alert(arr.length);//4
+    
+</script>
+<script>
+    // alert(text.includes("rain"));
+    // alert(text.includes("rain",12));
+</script>
+
+<script>
+    let url = "http://www.sist.co.kr";
+    alert(url.startsWith("http://"));
+</script>
+</body>
+</html>

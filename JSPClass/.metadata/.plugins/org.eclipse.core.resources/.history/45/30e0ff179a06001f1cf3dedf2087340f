@@ -1,0 +1,65 @@
+package days09;
+
+import java.io.IOException;
+import java.sql.Connection;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.util.ConnectionProvider;
+import com.util.JdbcUtil;
+
+@WebServlet("/FileTestServlet")
+public class FileTestServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+	public FileTestServlet() {
+		super();
+	}
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uri = request.getRequestURI();//list.ss, write.ss, update.ss
+
+		Connection conn = null;
+		String saveDirectory = null;
+
+		
+		//MVC 패턴
+		//commandHandler.properties list.ss => ListHandler.java X
+		//init() commandHandlerMap<rul,HashMap>
+		try {
+			conn = ConnectionProvider.getConnection();
+			FileTestDAO dao = FileTestDAO.getInstance(); //싱글톤
+			saveDirectory = request.getRealPath("/days09/upload");
+			System.out.println(saveDirectory);
+			
+			if (uri.endsWith("list.ss")) {//자료실 목록보기
+				
+			}else if(uri.endsWith("write.ss")){//글쓰기 + write.jsp 
+				
+			}else if(uri.endsWith("write_ok.ss")){//글쓰기 저장 
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn);
+		}
+
+
+	}//doGet
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+
+
+	}
+
+}

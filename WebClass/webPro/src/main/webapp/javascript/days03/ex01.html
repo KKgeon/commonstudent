@@ -1,0 +1,73 @@
+<script>
+    document.write("홍길동-1")
+
+</script>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <script src="ex01_script.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <script>
+            document.write("홍길동-2")
+        </script>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            js script 삽입할 수 있는 위치 - 어디든 상관 없다.
+            - body or head 태그
+            - js body 하단( 닫기 태그 위) 에 배치하면
+            스크립트 해석으로 인해 표시 속도가 향상
+
+
+            script 태그 안에 코딩
+            script [type=text/javascript]
+            js는 html의 기본 스크립트 언어.
+
+            - 외부 js 파일 사용 가능. 예제) ex01_script.js
+                ㄴ 동일한 js 코딩을 여러 페이지에서 재사용.
+                ㄴ head 태그 안에 script 태그로 외부 js 파일을 참조
+                ㄴ html 코딩과 js 코딩을 분리할 수 있다.
+                    ㄴ 가독성 향상, 유지보수 더 쉽다.
+                    ㄴ 외부js 파일이 캐싱되어서 페이지의 로딩 속도가 향상된다.
+
+        </xmp>
+
+
+    </div>
+    <script>
+        document.write("홍길동-3");
+      </script>
+      
+      
+        <button type="button" onclick="nameAlert('홍길동')">클릭</button>
+      
+</body>
+
+</html>
+<!-- <script>
+    document.write("홍길동-4")
+</script> -->

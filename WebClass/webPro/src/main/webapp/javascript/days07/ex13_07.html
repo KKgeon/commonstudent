@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+    </div>
+
+    <script>
+        let counter = (function () {//자체 호출 함수
+                let count = 0;
+
+                function changeCount(value){
+                    count +=value;
+                }
+                return {//js 객체
+                    //메서드
+                    increment: function () {//중첩함수
+                        // count++;
+                        changeCount(1);
+                    },
+                    decrement: function () {//중첩함수
+                        // count--;
+                        changeCount(-1);
+
+                    },
+                    value: function () {
+                        return count;
+                    }
+                };
+            }) ();
+
+            document.write(`${counter.value()}<br>`);
+            counter.increment();
+            counter.increment();
+            counter.increment();
+            document.write(`${counter.value()}<br>`);
+            counter.decrement();
+            counter.decrement();
+            document.write(`${counter.value()}<br>`);
+    </script>
+</body>
+
+</html>

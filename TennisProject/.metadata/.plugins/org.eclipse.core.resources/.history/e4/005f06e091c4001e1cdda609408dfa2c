@@ -1,0 +1,7 @@
+package tennisScoreView;
+
+public class TennisPlayer {
+	String name;
+	boolean gender;
+	int age;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            js Set
+            js Map
+            ㄴ key-vlaue 한 쌍 (entry)
+            ㄴ 순서 O
+            - new map();
+            set() 맵의 키값을 설정
+            get() 맵에 키값을 얻어옴
+            delete() 키로 지정된 요소 제거
+            has() true/false 키 존재 유무
+            forEach()
+            enties() [key,value]
+            size 속성
+            등등
+        </xmp>
+    </div>
+    <script>
+        const m = new Map(  [   ["1번", "홍길동"]
+    ,["2번","김길동"]   ]);
+    m.set("3번","이중복");
+    m.set("4번","강남길")
+
+    // document.write(m.size);
+    
+    const value = m.get("3번");
+    
+    // document.write(value);
+    // m.clear();
+    // document.write(m.has("4번"));
+
+
+
+    for(let entry of m.entries()){
+        document.write(`>> ${entry} / ${entry[0]} - ${entry[1]}<br>`)
+    }
+    </script>
+</body>
+
+</html>

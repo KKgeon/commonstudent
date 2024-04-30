@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .imgbox {
+
+            width: 120px;
+            border: 1px solid gray;
+            padding: 6px;
+            margin: 4px;
+
+            text-align: center;
+            float: left;
+
+        }
+
+        .imgbox img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>display, visibility 속성 차이점</h3>
+
+
+    <div id="imgbox1" class="imgbox">Box1<img src="../images/img_5terre.jpg" alt=""><button
+            onclick="remove()">Remove</button></div>
+    <div id="imgbox2" class="imgbox">Box2<img src="../images/img_lights.jpg" alt=""><button>Hide</button></div>
+    <div id="imgbox3" class="imgbox">Box3<img src="../images/img_forest.jpg" alt=""><button>ResetAll</button></div>
+
+
+    <script>
+
+        let box1 = document.getElementById("imgbox1");
+        let box2Btn = document.querySelector("#imgbox2 button");
+        let box3Btn = document.querySelector("#imgbox3 button")
+        let Box2 = box2Btn.parentElement;
+        function remove() {
+            // alert("remove");
+            box1.style.display = "none";
+        }
+        box2Btn.onclick = function () {
+            // alert("Hide");
+            // alert(this.parentElement);
+            let Box2 = this.parentElement;
+            //여전히 이전의 공간을 차지하고있더라.
+            //레이아웃에 영향을 미치더라.
+            Box2.style.visibility = "hidden";
+        }
+        box3Btn.addEventListener("click", function () {
+            box1.style.display = "block";
+         
+            Box2.style.visibility = "visible";
+        });
+    </script>
+</body>
+
+</html>

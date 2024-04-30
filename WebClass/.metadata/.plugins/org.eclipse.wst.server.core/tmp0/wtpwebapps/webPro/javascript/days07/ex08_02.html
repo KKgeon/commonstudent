@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+  </xmp>
+</div>
+<script>
+    const person = {
+        //속성
+        firstname:"길동",
+        lastname:"홍",
+        age:20,
+        //메서드
+        print:function(){
+            return this.firstname+"/"+this.age;
+        },
+        //중첩된 객체
+        // cars:{car1:"BMW",car2:"KIA"}
+
+        //중첩 배열 + 객체
+        cars: [
+            {name:"k9",year:2020},
+            {name:"k5",year:2021}
+        ]
+    };
+
+    // 1. 기존 객체에 새로운 속성 추가(기능)
+    person.eyeColor = "blue";
+
+    // 1-2. 기존 객체에 새로운 메서드 추가(기능)
+    person.name = function(){
+        return (this.firstname+ " " + this.lastname).toUpperCase;
+    }
+    // person.name();
+
+    // 2. 객체의 속성을 삭제
+    delete person.age;
+
+    // 3. 중첩된 객체
+    //cars : {car1:"BMW", car2:"KIA"}
+
+    // person.cars.car1 == "BMW"
+    // person["cars"]["car1"] == BMW
+
+    //4. 메서드를 호출
+    person.print();
+
+    //5. js 객체를 배열로 변환하는 함수 : Object.values()
+    const arr = Object.values(person);
+
+</script>
+
+<script>
+    //1. json 문자열을 js 객체로 변환하는 함수
+    //      ㄴ JSON.parse()
+    //2. js 객체를 json 문자열로 변환하는 함수
+    //      ㄴ JSON.stringify()
+
+    let jsonPerson = JSON.stringify(person)
+    alert(typeof jsonPerson);//string
+    alert(jsonPerson);
+    //{"firstname":"길동","lastname":"홍","cars":[{"name":"k9","year":2020},{"name":"k5","year":2021}],"eyeColor":"blue"}
+
+</script>
+</body>
+</html>

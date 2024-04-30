@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <script src="cookie.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+<!-- <body onload="init()"> -->
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <table border="1" style="background-color: white;width:400px;margin:0 auto">
+            <tr>
+                <td><img src="../images/item01.gif" alt="" /></td>
+                <td><img src="../images/item02.gif" alt="" /></td>
+                <td><img src="../images/item03.gif" alt="" /></td>
+            </tr>
+            <tr>
+                <td><input type="radio" checked="checked" name="bgImages" id="item01" value="item01" />item01</td>
+                <td><input type="radio" name="bgImages" id="item02" value="item02" />item02</td>
+                <td><input type="radio" name="bgImages" id="item03" value="item03" />item03</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let cname = "bgimg";
+        let cvalue = "item01";
+        let cpath = "/";
+        let expiresDays = 10;
+        window.onload = function () {
+            //1.bgimg 쿠키가 저장되어 있는지 확인 후 쿠키값을 얻어와서 배경 이미지로 설정.
+            //
+            cvalue = getCookie(cname);
+
+            if (cvalue) { // 쿠키가 존재
+                document.getElementById(cvalue).checked = "checked";
+            } else {    // 쿠키 존재 X
+                cvalue = "item01";
+                setCookie(cname, cvalue, cpath, expiresDays);
+            }
+            document.body.style.backgroundImage = `url(../images/${cvalue}.gif)`;
+
+
+            let rdbs = document.getElementsByName("bgImages");
+            for (const rdb of rdbs) {
+                rdb.onclick - function () {
+                    cvalue = event.srcElement.value;
+                    setCookie(cname, cvalue, cpath, expiresDays);
+                    document.body.style.backgroundImage = `url(../images/${cvalue}.gif)`;
+                }//onclick
+            }//forof
+        }
+    </script>
+</body>
+
+</html>

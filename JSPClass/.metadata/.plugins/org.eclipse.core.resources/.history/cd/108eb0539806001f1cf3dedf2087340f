@@ -1,0 +1,13 @@
+package days09;
+//싱글톤
+public class FileTestDAO {
+
+	private static FileTestDAO dao = null;
+	private FileTestDAO() {}
+	public static FileTestDAO getInstance() {
+		if( dao == null ) {
+			dao = new FileTestDAO();
+		}
+		return dao;
+	}
+}//class

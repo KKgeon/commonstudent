@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [BOM]
+    2. screen 객체
+        - 사용자 화면에 대한 정보를 가지고 있는 객체
+        screen.width 화면 너비
+        screen.height 화면 높이
+        screen.availWidth : 실제 사용 가능한 화면 너비
+            (작업표시줄 X)
+        
+        screen.availHeight : 실제 사용 가능한 화면 높이
+        screen.colorDepth : 색 농도
+        16비트 : 65536가지
+        32비트 : 32억가지
+         </xmp>
+         <p id="demo"></p>
+</div>
+
+<script>
+    let output = `
+    ${screen.width} / ${screen.height}<br>
+    ${screen.availWidth} / ${screen.availHeight}<br>
+    ${screen.colorDepth}`;
+    $("p#demo").html(output);
+</script>
+</body>
+</html>

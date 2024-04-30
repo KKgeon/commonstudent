@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+
+        <button onclick="btn1_click(this);"> 버튼 1 </button>
+        <button id="btn2"> 버튼 2 </button>
+    </div>
+
+    <script>
+        function btn1_click(obj) {
+            //   alert(this); // 여기서 this는 버튼객체가 아니고 최상위객체인 window객체
+            //  alert(event.srcElement); //[object HTMLButtonElement]
+            alert(obj);
+        }
+        /*
+        document.querySelector("#btn2").onclick = ()=>{ //[object Window]
+            alert(this);
+
+        }*/
+        document.querySelector("#btn2").onclick = function(){//[object HTMLButtonElement]
+            alert(this); //[object HTMLButtonElement]
+
+        }
+
+        /* [정리]
+        1. 함수 안에서 this 는 window 최상위 객체이다.
+        2. 엄격모드에서는 this == undefined
+        3. 이벤트에서는 이벤트를 받는 요소 HTMLButtonElement
+        4. 객체 메서드 에서는 this == 객체 자기 자신 ***
+        */
+
+        var msg = "helle world~";
+        //alert(msg);
+        //전역변수로 선언된다 ( window 객체의 변수가 된다)
+        //alert(window.msg);
+    </script>
+    <script>
+        //ES6 가변인자
+        //     int...args
+        function sum(...args){
+            let result = 0;
+            for (let i = 0; i < args.length; i++) {
+                result += args[i];
+                
+            }
+            return result;
+        }
+
+    </script>
+</body>
+
+</html>

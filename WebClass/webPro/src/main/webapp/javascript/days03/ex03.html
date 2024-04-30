@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    1. js 서버 실행 X
+       js 클라이언트 실행(웹브라우저)
+    2. js 명령문은 작성된 순서대로 실행된다.
+    3. 실문문 뒤에 세미콜론을 추가.
+        window.alert("test");
+        let a 세미콜론을 생략할 수 있다.
+        let b
+        let c
+
+        let a, b, c;
+        a=1;b=2;c=3;    세미콜론 생략 X
+    4. js 대소문자를 구분한다.
+    5. js 주석처리 //
+    6. js 코딩에서 여러 공백은 무시된다.
+        let name    = "홍길동";
+        let name = "홍길동"; (권장)
+        int a=1;
+        int a = 1;(권장)
+        let c = 3 + 5;(권장)
+    7. 최고의 가독성을 위해서 개발자들은 한 라인에 80자를 초과하지 않도록 한다.
+    예)
+    documet.getElemetById("demo").innerHTML =
+        "출력내용";
+    8. js 예약어
+    abstract   arguments   await*   boolean
+      break   byte   case   catch
+      char   class*   const   continue
+      debugger   default   delete   do
+      double   else   enum*   eval
+      export*   extends*   false   final
+      finally   float   for   function
+      goto   if   implements   import*
+      in   instanceof   int   interface
+      let*   long   native   new
+      null   package   private   protected
+      public   return   short   static
+      super*   switch   synchronized   this
+      throw   throws   transient   true
+      try   typeof   var   void
+      volatile   while   with   yield
+
+    9. js값의 2가지 유형
+        1) 고정된 값 (리터럴)
+        100
+        3.14
+        'A'
+        "Name"
+        true, false
+        2) 변수값 (변수)
+            ㄱ. var 1995~2015(ES6) 전역, 지역변수
+                var name; 변수 선언 형식
+
+            ㄴ. let                 블럭변수
+                {   영역(블럭) 연산자
+                let age;
+            }
+            ㄷ. const   블럭변수(상수)
+            ㄹ. 위의 키워드 없이 변수 선언 가능하다.
+</xmp>
+</div>
+
+<div id="demo"></div>
+<script>
+        // let name;
+        // name = "홍길동 2 ";
+        // alert(name);
+
+</script>
+<script>
+    //변수만 선언하고 초기화 X
+    // let kor;
+    // alert(kor); //undefined
+    // js 식별자를 명명하는 규칙
+    // (java 동일하다)
+</script>
+
+
+<script>
+age = 100;
+
+document.getElementById("demo").innerText = age;
+
+let age;
+</script>
+</body>
+</html>

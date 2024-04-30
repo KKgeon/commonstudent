@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+  </xmp>
+</div>
+<script>
+    //[문제] 이번 달이 마지막 날짜?
+    /*let d = new Date();
+    d.setDate(1); //2024 4 1
+    d.setMonth(d.getMonth()+1);
+    d.setDate(d.getDate()-1);
+    console.log(d.toLocaleDateString());
+    */
+</script>
+<!-- <script>
+    let d = new Date();
+    const rrn = "870123-1700001";
+    rrn.substr(2,4)
+    console.log();
+</script> -->
+<script>
+    const rrn = "870123-1700001";
+    // 위의 사람이 생일 지남 여부 출력.
+    // 생일 지났다. 지나지 않았다. 오늘이 생일다.
+    
+    let bmonth = rrn.substr(2,2); // 01
+    let bday = rrn.substr(4,2); // 23
+    
+    let today = new Date();
+    console.log( today );
+    
+    today.setHours(0);
+    today.setMinutes(0);
+    today.setSeconds(0);
+    today.setMilliseconds(0);  
+    console.log(today.toLocaleString());
+    
+    let tyear = today.getFullYear();
+    let birth = new Date(`${tyear}.${bmonth}.${bday}`);
+    console.log(birth.toLocaleString());
+    
+    // 양수 : 생일 지남
+    // 음수 : 생일 지나지 않음
+    //   0  : 오늘 생일 
+    console.log( today - birth ); 
+  </script>
+
+<script>
+    function birthdayCheck(rrn) {
+     //  "0123" => 123
+      let birthday = parseInt(rrn.substring(2,4)+rrn.substring(4,6));
+      
+     // "1018" => 1018
+      let d = new Date();
+      let today = parseInt((d.getMonth()+1).toString()+d.getDate().toString());
+  
+      // 생일 지났으면 true, 안 지났으면 false
+      // 생일 == 오늘
+      // 1018 == 1018
+      return birthday < today
+   }; 
+  </script>
+</body>
+</html>

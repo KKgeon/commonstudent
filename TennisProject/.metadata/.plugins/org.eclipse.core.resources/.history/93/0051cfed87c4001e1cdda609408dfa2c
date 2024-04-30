@@ -1,0 +1,20 @@
+package TennisScoreView;
+
+import java.util.Scanner;
+
+public class SelectSoloOrDuo {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		
+		choosenSoloDuo();
+
+	}//m
+
+	private static void choosenSoloDuo() {
+System.out.println("1. 단식\t 2.복식");
+
+		
+	}
+}//c

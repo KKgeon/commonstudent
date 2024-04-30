@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    1. 웹 페이지 요철 -> 응답
+    요청(request)
+    응답(response)
+    2. 웹 브라우저가 응답받은 웹 페이지를 로드하면 문서객체모델 (DOM)을 생성
+    3. html 문서의 DOM 객체를 사용해서 모든 요소에 엑세스, 변경 등등 조작을 할 수 있다.
+    (DOM메서드, 속성 제공)
+    4. DOM 모델은 객체 트리로 구성
+    5. html 문서의 모든 것이  노드(node)이다.
+        [   ]
+        - 요소, 속성, 주석ㄷ처리, 선언문, 텍스트
+        - html 태그 : root element,
+        -<> 텍스트 </>> : node 등등
+    6. 모든 노드들은 관계를 맺고있다.
+    - 부모 자식 관계
+    parentNode  childNode
+    parentElement
+    - 형제 관계
+    nextSibling
+    nextElementSibling
+
+    previousSibling
+    previousElementSibling
+
+    firstChild
+    lastChild
+
+
+    - childNodes 모든 자식 노드 목록
+                        nodelist
+    7. 각 노드 속성(element, attribute, comment)
+    1)nodeValue 속성
+    2)nodeName 속성
+    3)nodeType
+        1 - 요소노드
+        2 - 속성노드
+        3 - 텍스트노드
+        4 - 주석노드
+        5 - html
+        6 - html 선언문 DOCTYPE
+  </xmp>
+</div>
+</body>
+</html>

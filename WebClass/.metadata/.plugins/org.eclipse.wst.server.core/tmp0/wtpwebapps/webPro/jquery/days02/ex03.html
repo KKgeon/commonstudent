@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <input type="radio" name="group" value="aaa">aaa<br>
+        <input type="radio" name="group" value="bbb">bbb<br>
+        <input type="radio" name="group" value="ccc">ccc<br>
+        <input type="radio" name="group" value="ddd">ddd<br>
+        <input type="radio" name="group" value="eee">eee<br>
+        <br>
+        <button>실행</button>
+        <p id="demo"></p>
+
+
+    </div>
+
+
+    <script>
+        $("button").click(function () {
+            alert($(":radio[name=group]").is(":checked"))
+
+        })
+
+
+
+
+
+        /*
+        let flag = false;
+        $("button").click(function () {
+            $(":radio").each(function (indext, element) {
+                if (element.checked) {
+                    $("#demo").text(element.value);
+                    flag = true;
+                }
+
+            }
+            )
+            if (!flag) {
+                alert("아 다시해 다시")
+            }
+        });
+        */
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .imgbox {
+
+            width: 120px;
+            border: 1px solid gray;
+            padding: 6px;
+            margin: 4px;
+
+            text-align: center;
+            float: left;
+
+        }
+
+        .imgbox img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>display, visibility 속성 차이점</h3>
+
+
+    <div id="imgbox1" class="imgbox">Box1<img src="../images/img_5terre.jpg" alt=""><button>Remove</button></div>
+    <div id="imgbox2" class="imgbox">Box2<img src="../images/img_lights.jpg" alt=""><button>Hide</button></div>
+    <div id="imgbox3" class="imgbox">Box3<img src="../images/img_forest.jpg" alt=""><button>ResetAll</button></div>
+
+
+    <script>
+        $("#imgbox1 button").click(function () {
+            // alert("remove")
+            // style="display:none";
+            $("#imgbox1").css("display","none")
+            $
+        })
+        $("#imgbox2 button").click(function () {
+            $(this).parent().css("visibility","hidden")
+        })
+
+
+        $("#imgbox3 button").click(function () {
+            alert("resetall")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+  <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+  <style>
+    span.material-symbols-outlined {
+      vertical-align: text-bottom;
+    }
+
+    .box {
+      position: absolute;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+        style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt="">
+    </h1>
+    <ul>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </header>
+  <div>
+    <xmp class="code">
+    </xmp>
+    <img src="../images/item01.gif" alt="">
+  </div>
+
+
+  <script>
+    //item01.gif~ item21.gif
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // 컨텍스트 메뉴( contextmenu)
+    document.oncontextmenu = function () {
+      // alert("오른쪽 마우스는 사용할 수 없습니다.");
+      return false; // 이벤트 취소
+    }
+
+    document.onmousedown = function () {
+      // console.log( event.button );
+      if (event.button == 0) { // 왼쪽 마우스 
+
+        document.title = event.clientX + ", " + event.clientY
+          + " / " + $("img").width();
+
+        let img = document.createElement("img");
+        // 01 ~ 21
+        var imgNo = getRandom(1, 21).toString().padStart(2, 0);
+        var src = `../images/item${imgNo}.gif`;
+        img.setAttribute("src", src);
+        img.classList.add("box");
+
+        let left = event.clientX - $("img").width() / 2;
+        let top = event.clientY - $("img").height() / 2;
+        img.setAttribute("style", `left:${left}px;top:${top}px`);
+
+        document.body.appendChild(img);
+      } else if (event.button == 2) { // 오른쪽 마우스
+        document.body.removeChild(event.srcElement);
+      } else if (event.button == 1) { // 가운데 휠 마우스
+        var imgs = document.querySelectorAll("img.box");
+        for (let img of imgs) {
+          // document.body.removeChild(img);
+          img.remove();
+        }
+      }
+    }
+
+
+  </script>
+
+
+ 
+</body>
+
+</html>

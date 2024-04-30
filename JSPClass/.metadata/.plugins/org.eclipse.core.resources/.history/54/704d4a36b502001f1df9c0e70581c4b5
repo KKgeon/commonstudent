@@ -1,0 +1,61 @@
+package days06.mvc.controller;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import days06.mvc.command.CommandHandler;
+
+//@WebServlet("/DispatcherServlet")
+public class DispatcherServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public DispatcherServlet() {
+        super();
+    }
+    
+    ///board/list.do new ListHandler()
+    public Map<String, CommandHandler> commandHandlerMap = new HashMap<>();
+    @Override
+    public void init() throws ServletException {
+    	super.init();
+    	//System.out.println(">DispatcherServlet.init()...");
+    	// web.xml <servlet><init-param><param-name>path</param-name></init-param></servlet>
+    	String path = this.getInitParameter("path");
+      	String realPath = this.getServletContext().getRealPath(path);
+      	//C:\E\Class\WorkSpace\JSPClass\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\jspPro\WEB-INF\commandHandler.properties
+      	
+      	//System.out.println(realPath);
+      	Properties prop = new Properties();
+      	try (FileReader reader = new FileReader(realPath);){
+			
+		} catch (Exception e) {
+			throw new ServletException()
+		}
+    }
+
+	@Override
+	public void destroy() {
+		super.destroy();
+//		System.out.println(">DispatcherServlet.destroy()...");
+	}
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

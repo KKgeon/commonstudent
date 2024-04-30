@@ -1,0 +1,3 @@
+# requestURL=commandHandler mapping
+/board/list.do=days06.mvc.command.ListHandler
+#/board/write.do=days06.mvc.command.WriteHandler

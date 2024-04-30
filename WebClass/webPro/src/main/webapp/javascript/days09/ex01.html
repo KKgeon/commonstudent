@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+      [js cookie(쿠키)]
+      
+        1. 쿠키(cookie) ?
+          클라이언트 -> 요청 -> 서버
+          
+          클라이언트 <- 응답 <- 서버
+          
+          데이터 유지 X (상태관리 X)
+          -클라이언트(사용자컴퓨터)에
+          텍스트 파일 형식으로 저장된 데이터(정적 데이터)
+      
+        2. 클 - 상태관리 : 쿠키
+             서 - 상태관리 : 세션, DB
+
+        3. 클 -> 요청 -> 서
+                (쿠키 포함)     (쿠키 서버 처리)
+
+        4. 쿠키 : 인증처리, 장바구니 구현
+        5. 쿠키 = 이름 =값 한 쌍으로 저장.
+        6. [js 쿠키 처리]
+            ㄴ document.cookie 속성을 사용.
+            jsp 쿠키 처리
+        7. 사용하는 브라우저에서 쿠키 사용 여부를 결정
+        8. 쿠키 선언 형식
+
+        쿠키이름 = 쿠키값;_만료시점=날짜;_경로=경로값;_도메인=도메인명;+보안옵션
+        X=Y;_expires=날짜;_path=경로값;_domain=localhost;_security=
+        9. 만료 시점을 생략하면 기본적으로 브라우저가 닫히면 쿠키는 삭제.
+        10._path 경로를 생략하면 기본적으로 현재 요청하는 페이지의 URL에 속하는 쿠키.
+        
+
+  </xmp>
+
+</div>
+</body>
+</html>

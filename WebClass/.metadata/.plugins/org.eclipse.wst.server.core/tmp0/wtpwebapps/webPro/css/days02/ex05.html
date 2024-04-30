@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width:100%;
+            border:1px solid gray;
+
+        }
+
+        th,td{
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        div{
+            border: 1px solid red;
+            overflow-x: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <pre>
+[반응형 테이블]
+화면이 너무 작아서 전체 내용(content)을 표시할 수 없는 경우 가로 스크롤 막대로 표시하는 테이블
+
+-table 요소 주위에 컨테이너(div)를 추가하고
+overflow-x:auto 속성을 설정하면
+반응형 테이블을 만들 수 있다.
+</pre>
+</body>
+
+<!-- table>(tr>th*10>lorem1)+(tr>td*10>lorem1) -->
+<table>
+    <tr>
+        <th>Lorem.</th>
+        <th>Natus.</th>
+        <th>Soluta.</th>
+        <th>Velit?</th>
+        <th>Eos?</th>
+        <th>Excepturi.</th>
+        <th>Cumque?</th>
+        <th>Similique.</th>
+        <th>Omnis!</th>
+        <th>Aut.</th>
+    </tr>
+    <tr>
+        <td>Lorem.</td>
+        <td>Voluptate!</td>
+        <td>Asperiores.</td>
+        <td>Esse!</td>
+        <td>Quasi?</td>
+        <td>Voluptatum.</td>
+        <td>Omnis!</td>
+        <td>Inventore?</td>
+        <td>Saepe!</td>
+        <td>Dolore.</td>
+    </tr>
+</table>
+
+</html>
