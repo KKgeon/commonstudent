@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    p{
+        width: 200px;
+        border: 1px solid gray;
+    }
+
+    p.to2{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip; /*기본값 잘라내기*/
+    }
+
+    p.to3{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* ..... */
+    }
+
+    p.to3:hover{
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: ellipsis; /* ..... */
+    }
+    p.to4{
+        /* 줄바꿈 규칙 */
+        word-break: break-word;
+        /* 긴 단어를 다음 라인으로 줄바꿈 */
+        word-wrap: break-word;
+
+    }
+</style>
+<body>
+<pre>
+    [텍스트 효과]
+    1. text-overflow
+        텍스트 오버플로우 지정.
+    2. word-wrap
+        하나의 단어가 너무 길어서 너비보다 오버플로우 발생
+        강제 줄바꿈/ 자동 줄 바꿈
+    3. word-break
+        줄 바꿈 규칙
+    4. writing-mode
+        쓰기 모드
+</pre>
+
+<p class="to1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat pariatur.</p>
+  <p class="to2">Ullam optio et dignissimos? Hic blanditiis temporibus unde perferendis eos.</p>
+  <p class="to3">Eius nobis minus sapiente quae error repellendus labore. Minima ullam.</p>
+  
+  <p class="to4">Eius nobisminussapientequaeerrorrepellendus labore. Minima ullam.</p>
+</body>
+</html>

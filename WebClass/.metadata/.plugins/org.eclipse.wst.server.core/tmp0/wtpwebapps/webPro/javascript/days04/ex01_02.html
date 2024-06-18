@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        // $("#demo").html(myfunc(10, 20));
+        function myfunc(a, b) {
+            return a + b;
+        }
+        //자바스크립트 호이스팅 덕분에 호출먼저하고 함수선언해도 상관없다.
+
+        // alert(typeof myfunc); [function]
+        //js 함수는 표현식을 사용해서 정의 할 수도 있다.
+        const test = function(a,b){
+            let x; // 지역 변수
+            return a-b;
+        };
+        // $("#demo").html(test(1,2)); // -1
+        
+        </script>
+    <script>
+        //Function() 생성자를 사용해서 함수 정의할 수도 있다. (대문자)
+        const test2 = new Function("a","b","return a*b");
+        // $("#demo").html(test2(3,2));
+    </script>
+    <script>
+        // js변수, 함수는 호이스팅...
+        // (주의) 표현식을 사용하여 정의된 함수는 호이스팅 되지 않는다.
+        test3();
+        //Cannot access 'test3' before initialization
+        //호이스팅되지 않아 에러 발생
+
+
+        const test3=function(){
+            alert("tset3");
+        }
+    </script>
+</body>
+
+</html>

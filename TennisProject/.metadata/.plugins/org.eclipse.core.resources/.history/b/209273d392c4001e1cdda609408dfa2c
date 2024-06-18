@@ -1,0 +1,41 @@
+package tennisScoreView;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TennisSetting {
+	public static void main(String[] args) throws IOException {
+
+		chooseSoloDuo();
+		chooseTeamMember();
+
+	}//m
+
+	private static void chooseTeamMember() {
+		ArrayList<TennisPlayer> TennisPlayers = new ArrayList<TennisPlayer>();
+
+		TennisPlayers.add(new TennisPlayer("남자선수1", true, 20));
+		
+		System.out.println("팀원을 선정하십시오");
+		
+	
+	}
+
+	private static void chooseSoloDuo() throws IOException {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("경기방식을 선택하십시오\n1. 단식\t 2.복식");
+
+		int choose = sc.nextInt();
+		if (choose==1) {
+			System.out.println("단식 경기를 선택하셨습니다");
+		}else if(choose==2) {
+			System.out.println("복식 경기를 선택하셨습니다");
+		} else {
+			System.out.println("잘못 된 입력입니다.");
+		}
+	}//choosenSoloDuo()
+	
+	
+	
+}//c

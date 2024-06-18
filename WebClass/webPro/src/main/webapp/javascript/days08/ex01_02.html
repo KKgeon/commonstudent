@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+    <style>
+        .myDiv {
+            background-color: #f1f1f1;
+            text-align: center;
+            border: 1px solid #d3d3d3;
+            position: absolute;
+            z-index: 9;
+        }
+
+        .myDivHeader {
+            padding: 10px;
+            cursor: move;
+            z-index: 10;
+            background-color: #2396F3;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+
+        <div id="myDiv1" class="myDiv">
+            <div id="myDiv1Header" class="myDivHeader">Click Here
+
+            </div>
+            <p>Lorem.</p>
+            <p>Cupiditate.</p>
+            <p>Deleniti.</p>
+        </div>
+        <div id="myDiv2" class="myDiv">
+            <div id="myDiv2Header" class="myDivHeader">Click Here
+               
+            </div>
+            <p>Lorem.</p>
+            <p>Cupiditate.</p>
+            <p>Deleniti.</p>
+        </div>
+    </div>
+    <script>
+        /*
+        // [js 함수 클로저]
+
+        function draggable(elemt) {
+
+            let elemtX = 0, elemtY = 0;
+
+            let moveX = 0, moveY = 0;
+
+            if (document.getElementById(elemt.id + "Header")) {
+                document.getElementById(elemt.id + "Header").onmousedown = dragMouseDown;
+            }
+
+
+
+            function dragMouseDown(e) {
+                // 이벤트 정보 : event 내장 객체
+                e = window.event || e;
+                console.log("[md]" + e.clientX + " / " + e.clientY);
+                elemtX = e.clientX;
+                elemtY = e.clientY;
+
+                document.onmousemove = dragMouseMove;
+                document.onmouseup = dragMouseUp;
+            }//dragMouseDown
+
+            function dragMouseMove(e) {
+                e = window.event || e;
+                console.log("[mv]" + e.clientX + " / " + e.clientY);
+                moveX = elemtX - e.clientX;
+                moveY = elemtY - e.clientY;
+
+
+                //#myDiv 이동
+                // 위치값 elemt.left, elemy.top
+                elemt.style.left = (elemt.offsetLeft - MoveX) + "px";
+                elemt.style.top = (elemt.offsetTop - MoveY) + "px";
+
+                elemtX = e.clientX;
+                elemtY = e.clientY;
+            }//dragMouseMove
+
+            function dragMouseUp(e) {
+                document.onmousemove = null;
+                document.onmouseup = dragMouseUp;
+
+            }//dragMouseUp
+
+            //중첩함수
+        }//draggable
+
+
+
+        draggable(document.querySelector("#myDiv1"));
+        draggable( document.querySelector("#myDiv2") );
+        */
+
+        
+    </script>
+    <script>
+        // [js 함수 클로저]
+        function draggable( elemt ){
+           
+           // 지역변수, 전역변수(폐쇄)
+           // 현재 요소의 위치값을 저장할 변수
+           let elemtX = 0, elemtY = 0;
+           // 움직인 거리를 저장할 변수
+           let moveX = 0, moveY = 0;
+           
+           if( document.getElementById( elemt.id + "Header" ) ){
+              document.getElementById( elemt.id + "Header" ).onmousedown 
+                = dragMouseDown; 
+           }
+           
+           // mousedown 이벤트
+           function  dragMouseDown(e){  // 중첩 함수
+              // 이벤트 정보 : event 내장 객체
+              e = window.event || e ;
+               console.log("[md] " + e.clientX + " / " + e.clientY );
+               elemtX = e.clientX;
+               elemtY = e.clientY;
+               
+               document.onmousemove = dragMouseMove;
+               document.onmouseup = dragMouseUp;
+              
+           } // dragMouseDown
+           
+           // mousemove 이벤트
+            function  dragMouseMove(e){  // 중첩 함수
+               e = window.event || e ;
+               console.log("[mv] " + e.clientX + " / " + e.clientY );
+               
+               moveX = elemtX - e.clientX; // 양수, 음수
+              moveY = elemtY - e.clientY;
+               
+               // #myDiv1 이동
+               // 위치값  elemt.left,  elemt.top     "12px"
+               //         elemt.offsetLeft            12
+               elemt.style.left = (elemt.offsetLeft - moveX)+"px" ;
+               elemt.style.top = (elemt.offsetTop - moveY)+"px" ;
+               
+               // 
+               elemtX = e.clientX;
+               elemtY = e.clientY;
+           } // dragMouseMown
+           
+           // mouseup 이벤트
+           function  dragMouseUp(e){  // 중첩 함수
+              document.onmousemove = null; // mousemove 이벤트 취소
+               document.onmouseup = dragMouseUp;
+           } // dragMouseMown
+           
+        } // draggable
+        
+        draggable( document.querySelector("#myDiv1") );
+        draggable( document.querySelector("#myDiv2") );
+     </script>
+     </body>
+     </html>
+     
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button {
+            background-color: red;
+            display: inline-block;
+            padding: 5px;
+            border: none;
+            color: white;
+        }
+
+
+        /* 
+    button:hover{
+        background-color: blue;
+    }
+     */
+    </style>
+</head>
+
+<body>
+    <h3>마우스 롤오버 효과</h3>
+    <button type="button">마우스 롤오버 효과</button>
+    <button>마우스 롤오버 효과</button>
+    <button>마우스 롤오버 효과</button>
+
+
+    <script>
+
+
+        // const p = document.querySelector("button");
+        //          p.onmouseover = function () {
+        //              p.style.backgroundColor="blue";
+        //          }
+        //          p.onmouseout = function () {
+        //              p.style.backgroundColor="red";
+        //          }
+        const p = document.querySelectorAll("button");
+
+        for (let i = 0; i < p.length; i++) {
+            p[i].onmouseover = function () {
+                event.srcElement.style.backgroundColor = "blue";
+            }
+            p[i].onmouseout = function () {
+                event.srcElement.style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

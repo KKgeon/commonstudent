@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            try-catch-finally
+            throw
+        </xmp>
+        <input type="text" id="msg" class="long">
+        <input type="button" value="test">
+        <p id="demo"></p>
+    </div>
+    <script>
+        $(":button").click(function (event) {
+            $("p#demo").html("");
+            const msg = $("#msg").val();
+
+            try {
+                if (msg.trim() == "") {
+                    throw "empty"; //강제 예외 발생
+                }
+                if (isNaN(msg)) {
+                    throw "not a number";
+                }
+
+                let num = Number(msg);
+                if (num<10) throw "too low";
+                if (num>=100) throw "too high";
+            } catch (err) {
+                $("p#demo").html(`Input is ${err}`);
+            }
+        });
+    </script>
+</body>
+
+</html>

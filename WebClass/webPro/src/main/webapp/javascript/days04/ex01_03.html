@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            [js 힘수 호출 방법]
+            1. 이벤트 발생
+            2. js 코딩으로 함수 호출
+            3. 자체 호출 (함수 클로저)
+
+
+
+        </xmp>
+    </div>
+    <script>
+
+        /*
+        호이스팅X
+        const test = function(a,b){
+            alert("익명 함수 표현식");
+        }
+        test();
+    */
+    </script>
+
+    <script>
+        //자체호출함수
+       /* (function(a,b){
+            alert("자체 호출 함수...");
+        })(); */
+    </script>
+    <script>
+        //js에서 함수는 객체이다.
+        function test(){
+            alert("test");
+        }
+        alert(typeof test); //function -> object
+    </script>
+</body>
+
+</html>

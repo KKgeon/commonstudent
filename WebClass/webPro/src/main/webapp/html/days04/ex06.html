@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/favicon.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- class="클래스명"
+	ㄴ 스타일 시트에서 자주 사용
+	ㄴ js 특정 클래스를 가진 요소를 찾아서 조작. -->
+<style>
+.team1{
+background-color: yellow;
+}
+.team2{
+background-color: green;
+}
+li.teamleader{
+color: red;
+}
+
+</style>
+</head>
+<body>
+	<!-- 
+class 속성 
+
+
+
+
+-->
+
+
+	<div class="class5">
+	<!-- id 속성의 값
+		ㄴ 대소문자를 구분
+		ㄴ 하나이상의 문자를 퐘해야 된다.
+		ㄴ 숫자로 시작할 수 없다.
+		ㄴ 중간에 공백을 포함할 수 없다.
+		
+		CSS #아이디명	스타일 지정
+		js 	아이디명으로 조작 -->
+		
+		
+		<!-- 
+		class 속성
+		id    속성 
+		-->
+		<div id="고유한이름" class="team1">
+			<ul>
+				<li class ="teamleader">김진성</li>
+				<li>유진</li>
+				<li>류영은</li>
+				<li>김영진</li>
+				<li>한재호</li>
+				<li>조연화</li>
+				<li>이시은</li>
+			</ul>
+		</div>
+		<div class="team2">
+			<ul>
+				<li class="teamleader">박우현</li>
+				<li>원대안</li>
+				<li>이동영</li>
+				<li>권맑음</li>
+				<li>강명건</li>
+				<li>이동찬</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+	
+	<script>
+// 	div.team2 li
+	var team2List = document.querySelectorAll("div.team2 ul li");
+// 	alert(team2List.length);
+	for (var i = 0; i < team2List.length; i++) {
+// 		console.log(team2List[i].innerText);
+		team2List[i].onclick = function() {
+// 			console.log(this.innerText);
+// 			this.remove();
+			this.parentElement.removeChild(this);
+		}
+	
+	}//for
+	
+	
+	</script>
+</body>
+</html>

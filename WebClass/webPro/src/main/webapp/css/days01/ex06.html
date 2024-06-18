@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+img {
+	opacity: 0.5;
+}
+img:hover{
+opacity: 1.0}
+
+</style>
+
+<style type="text/css">
+div {
+	background-color: rgb(3,170,109);
+	padding: 10px;
+}
+/* div.first{opacity: 0.1;} */
+/* div.second{opacity: 0.3;} */
+/* div.third{opacity: 0.6;} */
+
+
+
+</style>
+</head>
+<body>
+<!-- CSS 불투명도/투명도 -->
+<!-- opcity 속성 : 0.0 완전투명 ~ 1.0 불투명 -->
+
+<img src="../images/img_forest.jpg" alt="" width="170" height="100"/>
+<img src="../images/img_mountains.jpg" alt="" width="170" height="100"/>
+<img src="../images/img_5terre.jpg" alt="" width="170" height="100"/>
+
+
+<hr />
+
+<div class="first" style="opacity: 0.1">
+	<p>opacity 0.1</p>
+</div>
+<div class="second" style="opacity: 0.3">
+	<p>opacity 0.3</p>
+</div>
+<div class="third" style="opacity: 0.6">
+	<p>opacity 0.6</p>
+</div>
+<div>
+	<p>opacity 1.0(기본값)</p>
+</div>
+
+<hr>
+<div class="first" style="background-color:  rgba(3,170,109,0.1)">
+	<p>opacity 0.1</p>
+</div>
+<div class="second" style="background-color: rgba(3,170,109,0.3)">
+	<p>opacity 0.3</p>
+</div>
+<div class="third" style="background-color: rgba(3,170,109,0.6)">
+	<p>opacity 0.6</p>
+</div>
+<div>
+	<p>opacity 1.0(기본값)</p>
+</div>
+</body>
+</html>

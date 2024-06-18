@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [js 문자열]
+    let name = "";
+    let name = '';
+  </xmp>
+</div>
+<script>
+    /* 
+    let name = '';
+    // alert( typeof name ); // string
+    let msg = "kim's home.";
+    let msg = 'kims "home".';
+    let msg = 'kim\'s \"home\".';
+    // 이스케이프 문자 허용 \n  \' \" \r \t 등등
+    
+    // ES6(js 2016) 도입  벡틱연산자 `
+    // 홑따옴표, 쌍따옴표를 허용.
+    // 여러 줄의 문자열을 허용
+    let msg = `kim's 
+              "home".`;
+    
+    // 객체 생성하듯 문자열을 선언할 수 있다.
+    let name = new String("admin"); // 성능 X
+    let name = "admin"; // 권장
+    */
+ </script>
+ 
+ <script>
+    let name1 = "admin";
+    
+    let name2 = new String("admin");
+    let name3 = new String("admin");
+    
+    // alert( typeof name1 );  // string
+    // alert( typeof name2 );  // object
+    
+    // 두 문자열을 비교...
+    // alert( name1 == name2 ); // true
+    
+    // ===   타입까지 비교. 
+    // !==   타입까지 비교.
+    //alert( name1 === name2 ); // false
+    // X alert( name2 === name3 ); // false
+    
+ </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+  <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+  <style>
+    span.material-symbols-outlined {
+      vertical-align: text-bottom;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+        style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt="">
+    </h1>
+    <ul>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </header>
+  <div id="content">
+    <xmp class="code">
+    </xmp>
+
+    <button class="btn1">change color</button>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+  </div>
+  <script>
+    $(":text").addClass("full");
+    $(":text:eq(2)").focus();
+    $(":focus").css("background-color", "red");
+
+
+
+  </script>
+  <script>
+    $("#content div:first-of-type").css("background-color", "red");
+    $("#content div:eq(1)").css("background-color", "green");
+    $("#content div:last-of-type").css("background-color", "blue");
+
+    function animate_div() {
+      $("#content div:eq(0)")
+        .animate({ width: "50%" }, "slow")
+        .animate({ width: "100%" }, "slow", animate_div);
+    }
+    animate_div();
+
+    $(".btn1").on("click", function () {
+      $("#content div:animated")
+        .css("background-color", "yellow");
+    })
+  </script>
+</body>
+
+</html>

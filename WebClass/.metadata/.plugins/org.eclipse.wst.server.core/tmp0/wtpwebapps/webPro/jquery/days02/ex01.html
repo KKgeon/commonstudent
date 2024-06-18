@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+  <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+  <style>
+    span.material-symbols-outlined {
+      vertical-align: text-bottom;
+    }
+  </style>
+</head>
+
+<body onload="init();">
+  <header>
+    <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+        style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt="">
+    </h1>
+    <ul>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </header>
+  <div>
+    <xmp class="code">
+
+    </xmp>
+
+    <button>Turn ON</button>
+    <button>Turn OFF</button>
+    <br>
+    <!-- <img src="../images/pic_bulboff.gif" alt=""> -->
+    <!-- 12:03 수업시작 -->
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let img = $("<img>");
+      // img.attr("src","/webPro/javascript/images/pic_bulbon.gif");
+      // imp.prop("alt","bulb");
+      img.attr({
+        "src": "http://localhost/webPro/javascript/images/pic_bulboff.gif",
+        "alt": "bulb"
+
+      });
+      $("div").append(img);
+
+
+      $("button").last().hide();
+
+      $("button").first().click(function () {
+        img.attr({
+          "src": "http://localhost/webPro/javascript/images/pic_bulbon.gif"
+        });
+        $(this).hide().next().show();
+
+      });//턴온닫기
+      $("button").last().click(function () {
+        img.attr({
+          "src": "http://localhost/webPro/javascript/images/pic_bulboff.gif"
+        });
+        $(this).hide().prev().show();
+
+      });//턴오프닫기
+
+
+      $("img").hover(
+        
+      function(){
+        $("button").first().click()
+        
+      }, 
+      
+      function(){
+        $("button").last().click()
+
+
+      })//호버
+
+    })
+
+  </script>
+</body>
+
+</html>

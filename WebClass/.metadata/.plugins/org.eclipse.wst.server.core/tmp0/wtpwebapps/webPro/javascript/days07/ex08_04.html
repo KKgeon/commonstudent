@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            [js 객체생성자]
+            - 자바 생성자 비교(이해)
+            - 객체를 생성할 때 사용하는 함수
+            - 대문자 이름으로 시작(권장)
+            -this == 생성되는 객체
+
+            new String()
+            new Number()
+            new Boolean()
+            new Date()
+            다 객체생성자
+        </xmp>
+    </div>
+
+    <script>
+        //[js 객체생성자]
+        //  ㄴ 객체를 생성할 때 사용되는 특수한 함수
+
+        function Person(fname, lname, age) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+
+            this.fullname = function () {
+                return this.fname + " " + this.lname;
+            }
+        }
+
+        const p1 = new Person("길동", "홍", 20);
+        const p2 = new Person("길동", "홍", 20);
+
+        // alert(p1.fullname());
+
+        //1. 기존 생성된 객체에 새로운 속성 추가
+        p1.language = "kr";
+        //1. 기존 생성된 객체에 새로운 메서드 추가
+        p1.lang = function () {
+            return "";
+        }
+
+        // 2. 객체 생성자를 통해서 속성, 메서드 추가 (가능)
+        Person.prototype.eyeColor = "blue";
+        // alert(p1.eyeColor);
+        Person.prototype.print = function () {
+
+        }
+        // p1.print();
+    </script>
+</body>
+
+</html>

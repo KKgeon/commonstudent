@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+    <xmp class="code">
+       자바 컬렉션 map/list/[set]
+       중복 체크 가능
+       [js Set 컬렉션]  = 표준 내장 객체 
+    </xmp>
+    
+    <button>로또 번호  발생기</button>
+    <p id="demo"></p>
+    
+    <script>
+        
+      function getRndInt(min, max) { 
+        return Math.floor(Math.random()*(max-min+1)) +min;
+      } 
+       
+      $("button").on("click", function (event){
+        const lotto = new Set(); 
+        let n ;
+        while( lotto.size < 6 ){
+          n = getRndInt(1, 45); 	 
+          lotto.add(n); 
+        } // while
+            
+        // 오름차순 정렬
+        //lotto.sort((a,b)=>a-b);
+  
+        let content = "<ul>";
+        // content += lotto.join("</li><li>")
+        lotto.forEach(function (v){
+            content += `<li>${v}</li>`;
+        });
+        content += "</ul>";
+  
+        $("#demo").html(content);
+      });
+    </script>
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+      }
+
+      h4 {
+         margin: 10px;
+      }
+
+      .logout {
+         /* padding: 0px;
+         margin-top: 0;
+         float: right; */
+         position: relative;
+         float: right;
+         top: -52px;
+         right: 0px;
+
+
+
+      }
+
+
+      table,
+      td,
+      th {
+         border: 2px solid rgb(230, 225, 225);
+
+         border-collapse: collapse;
+
+      }
+
+      table tr td:nth-child(2) {
+         width: 500px;
+      }
+
+
+      th {
+         width: 150px;
+         text-align: center;
+
+      }
+
+      td {
+         padding: 3px;
+      }
+
+      .btn {
+         position: relative;
+         float: inline-end;
+         top: 192px;
+      }
+
+      .form {
+         align-content: first baseline;
+
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <h4>▶️설문 작성</h4>
+   <div class="surveyinsert">
+
+      <table>
+         <tr style="border-top:5px solid rgb(230, 225, 225);">
+            <th>질문</th>
+            <td>가장 좋아하는 여자 연예인은? <div class="logout">로그아웃</div>
+            </td>
+
+         </tr>
+         <tr>
+            <th>시작일</th>
+            <td> <select class="s_year"></select>년<select class="s_month"></select>월<select class="s_day"></select>일
+            </td>
+
+
+         </tr>
+         <tr>
+            <th>종료일</th>
+            <td> <select class="e_year"></select>년<select class="e_month"></select>월<select class="e_day"></select>일
+            </td>
+
+
+         </tr>
+         <tr>
+            <th>항목수</th>
+            <td><select class="col"></select></td>
+
+         </tr>
+         <tr style="height:300px">
+            <th>항목</th>
+            <td class="form">
+               <div>
+                  <input type="text" style="width: 80%;" value="1: 배슬기">
+                  <br />
+                  <input type="text" style="width: 80%;" value="2: 김옥빈">
+                  <br />
+                  <input type="text" style="width: 80%;" value="3: 아이비 꺄~~~~~~ 사. 랑. 해. 요. 아. 이. 비.">
+                  <br />
+                  <input type="text" style="width: 80%;" value="4: 한효주">
+                  <br />
+                  <input type="text" style="width: 80%;" value="5: 김선아">
+               </div>
+               </form>
+               <div class="btn"><button style="width: 40px;">확인</button> <button style="width: 40px;">취소</button>
+               </div>
+            </td>
+         </tr>
+      </table>
+   </div>
+
+   <script>
+      const sYear = document.querySelector('.s_year');
+      const sMonth = document.querySelector('.s_month');
+      const sDay = document.querySelector('.s_day');
+
+      const eYear = document.querySelector('.e_year');
+      const eMonth = document.querySelector('.e_month');
+      const eDay = document.querySelector('.e_day');
+
+      const col = document.querySelector('.col');
+      for (let year = 2024; year >= 1900; year--) {
+         const option = document.createElement('option');
+         option.text = year;
+         sYear.add(option);
+      }
+
+      for (let month = 1; month <= 12; month++) {
+         const option = document.createElement('option');
+         option.text = month;
+         sMonth.add(option);
+      }
+
+      for (let day = 1; day <= 31; day++) {
+         const option = document.createElement('option');
+         option.text = day;
+         sDay.add(option);
+      }
+
+      for (let year = 2024; year >= 1900; year--) {
+         const option = document.createElement('option');
+         option.text = year;
+         eYear.add(option);
+      }
+
+      for (let month = 1; month <= 12; month++) {
+         const option = document.createElement('option');
+         option.text = month;
+         eMonth.add(option);
+      }
+
+      for (let day = 1; day <= 31; day++) {
+         const option = document.createElement('option');
+         option.text = day;
+         eDay.add(option);
+      }
+
+      for (let day = 1; day <= 20; day++) {
+         const option = document.createElement('option');
+         option.text = day + "개";
+         col.add(option);
+      }
+   </script>
+
+</body>
+
+</html>

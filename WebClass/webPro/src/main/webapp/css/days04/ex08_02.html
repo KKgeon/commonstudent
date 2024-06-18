@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        p.test1 {
+            /* 텍스트 줄을 가로 또는 세로로 배치 여부 지정 */
+            writing-mode: horizontal-tb;
+        }
+
+        p.test2>span {
+            writing-mode: vertical-rl;
+        }
+
+        p.test3 {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="test1">Lorem ipsum dolor sit amet.</p>
+    <p class="test2">Aut <span>delectus</span> obcaecati excepturi repellendus.</p>
+    <p class="test3">Sunt voluptatum animi eveniet dolor.</p>
+</body>
+
+</html>

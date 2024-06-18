@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+
+
+        <input type="radio" id="rdbp" name="group" value="1" checked="checked"> p 요소
+        <input type="radio" id="rdbs" name="group" value="2"> select 요소
+        <br>
+        팀원 이름 입력 :
+        <input type="text" id="name" name="name" autofocus="autofocus">
+        <p id="demo"></p>
+        <select></select>
+
+        <script>
+            $("#demo");
+            $("select");
+
+
+           $("#name").on("keyup",function () {
+                if (event.keyCode == 13) {
+alert("엔터?");
+
+
+                    // let name = this.value;
+                    // if (document.querySelector("#rdbp").checked) {
+                    //     //1.
+                    //     p.innerHTML += `<li>${name}</li>`;
+
+                    // } else {
+
+                    //     //2.
+                    //     const op = new Option(name, name, false, true);
+                    //     s.appendChild(op);
+
+                    // }
+
+                    // //3.
+                    // this.select();
+                }//if
+            })
+        </script>
+    </div>
+</body>
+
+</html>

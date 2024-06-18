@@ -1,0 +1,192 @@
+<?xml version="1.1" encoding="utf-8"?>
+<e:Document xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:e="http://exerd.tomato.com/model" xmlns:o10g="http://exerd.tomato.com/oracle10g" UUID="Document_S-ShkNaVEe6VaLuQsT3onQ"
+    activeBusinessArea="BArea_S-TIrtaVEe6VaLuQsT3onQ" activeSchema="Schema_S-TIsdaVEe6VaLuQsT3onQ"
+    version="2.4.8.20170711-1106" productId="com.tomato.db.oracle_10g" openedDiagrams="Diagram_S-TIr9aVEe6VaLuQsT3onQ"><relationManager><relation
+        key="FKCGroup_7T0eE9aZEe6VaLuQsT3onQ"><value foreignKeyColumnGroup="FKCGroup_7T0eE9aZEe6VaLuQsT3onQ"
+          identifying="true"/></relation><relation key="FKCGroup_7T0eF9aZEe6VaLuQsT3onQ"><value
+          foreignKeyColumnGroup="FKCGroup_7T0eF9aZEe6VaLuQsT3onQ" identifying="true"/></relation><relation
+        key="FKCGroup_7T1FLdaZEe6VaLuQsT3onQ"><value foreignKeyColumnGroup="FKCGroup_7T1FLdaZEe6VaLuQsT3onQ"
+          identifying="true"/></relation><relation key="FKCGroup_7T1sNtaZEe6VaLuQsT3onQ"><value
+          foreignKeyColumnGroup="FKCGroup_7T1sNtaZEe6VaLuQsT3onQ"/></relation><relation
+        key="FKCGroup_7T1sONaZEe6VaLuQsT3onQ"><value foreignKeyColumnGroup="FKCGroup_7T1sONaZEe6VaLuQsT3onQ"/></relation></relationManager><configuration><domainDefinition
+        UUID="DDefinition_S-TIoNaVEe6VaLuQsT3onQ"><domain UUID="Domain_S-TIodaVEe6VaLuQsT3onQ"
+          name="문자" suggestedDataType="VARCHAR2(255)"><domain UUID="Domain_S-TIotaVEe6VaLuQsT3onQ"
+            name="주민등록번호" suggestedDataType="VARCHAR2(13)"/><domain UUID="Domain_S-TIo9aVEe6VaLuQsT3onQ"
+            name="주소"/><domain UUID="Domain_S-TIpNaVEe6VaLuQsT3onQ" name="웹주소"/><domain
+            UUID="Domain_S-TIpdaVEe6VaLuQsT3onQ" name="전화번호" suggestedDataType="VARCHAR2(30)"/><domain
+            UUID="Domain_S-TIptaVEe6VaLuQsT3onQ" name="이메일" suggestedDataType="VARCHAR2(40)"/><domain
+            UUID="Domain_S-TIp9aVEe6VaLuQsT3onQ" name="이름" suggestedDataType="VARCHAR2(50)"/></domain><domain
+          UUID="Domain_S-TIqNaVEe6VaLuQsT3onQ" name="숫자" suggestedDataType="INTEGER"><domain
+            UUID="Domain_S-TIqdaVEe6VaLuQsT3onQ" name="금액"/></domain><domain UUID="Domain_S-TIqtaVEe6VaLuQsT3onQ"
+          name="일시" suggestedDataType="DATE"/><domain UUID="Domain_S-TIq9aVEe6VaLuQsT3onQ"
+          name="객체" suggestedDataType="BLOB"><domain UUID="Domain_S-TIrNaVEe6VaLuQsT3onQ"
+            name="이미지" suggestedDataType="ORDImage"/><domain UUID="Domain_S-TIrdaVEe6VaLuQsT3onQ"
+            name="오디오" suggestedDataType="ORDAudio"/></domain></domainDefinition><viewSettingsPreset
+        name="eXERD 기본" showAltTableName="false"><cellsToShow>name</cellsToShow><cellsToShow>domain</cellsToShow><cellsToShow>dataType</cellsToShow></viewSettingsPreset><viewSettingsPreset
+        name="엔티티 모드" showAltTableName="false"><cellsToShow>name</cellsToShow><cellsToShow>domain</cellsToShow></viewSettingsPreset><viewSettingsPreset
+        name="E-R 개요 모드" columnFilter="tableOnly" showTableComment="true"><cellsToShow>name</cellsToShow><cellsToShow>domain</cellsToShow><cellsToShow>dataType</cellsToShow></viewSettingsPreset><viewSettingsPreset
+        showColumnHeader="true" name="논리/물리 동시편집"><cellsToShow>name</cellsToShow><cellsToShow>oppositeModeName</cellsToShow><cellsToShow>domain</cellsToShow><cellsToShow>dataType</cellsToShow><cellsToShow>nullable</cellsToShow></viewSettingsPreset></configuration><businessAreas
+      UUID="BArea_S-TIrtaVEe6VaLuQsT3onQ" logicalName="기본 업무영역" physicalName="DEFAULT_AREA"
+      tables="Table_7Tz3BNaZEe6VaLuQsT3onQ Table_7Tz3D9aZEe6VaLuQsT3onQ Table_7T0eGdaZEe6VaLuQsT3onQ Table_7T1FIdaZEe6VaLuQsT3onQ Table_7T1FMdaZEe6VaLuQsT3onQ Table_7T1FPNaZEe6VaLuQsT3onQ"><diagrams
+        UUID="Diagram_S-TIr9aVEe6VaLuQsT3onQ" logicalName="다이어그램" physicalName="diagram"><diagramEntry
+          xsi:type="e:TableDiagram" UUID="TDiagram_7TzP9taZEe6VaLuQsT3onQ" location="Point(211, 127)"
+          table="Table_7Tz3BNaZEe6VaLuQsT3onQ"/><diagramEntry xsi:type="e:TableDiagram"
+          UUID="TDiagram_7TzP99aZEe6VaLuQsT3onQ" location="Point(542, 147)" table="Table_7Tz3D9aZEe6VaLuQsT3onQ"/><diagramEntry
+          xsi:type="e:TableDiagram" UUID="TDiagram_7TzP-NaZEe6VaLuQsT3onQ" location="Point(886, 96)"
+          table="Table_7T0eGdaZEe6VaLuQsT3onQ"/><diagramEntry xsi:type="e:TableDiagram"
+          UUID="TDiagram_7TzP-daZEe6VaLuQsT3onQ" location="Point(1269, 106)" table="Table_7T1FIdaZEe6VaLuQsT3onQ"/><diagramEntry
+          xsi:type="e:TableDiagram" UUID="TDiagram_7TzP-taZEe6VaLuQsT3onQ" location="Point(896, 537)"
+          table="Table_7T1FMdaZEe6VaLuQsT3onQ"/><diagramEntry xsi:type="e:TableDiagram"
+          UUID="TDiagram_7TzP-9aZEe6VaLuQsT3onQ" location="Point(887, 363)" table="Table_7T1FPNaZEe6VaLuQsT3onQ"/><viewSettings
+          showAltTableName="false"><cellsToShow>name</cellsToShow><cellsToShow>domain</cellsToShow><cellsToShow>dataType</cellsToShow></viewSettings><printSettings
+          marginTop="10" marginRight="10" marginBottom="10" marginLeft="10" paperKind="A4"
+          paperOrientation="landscape" header="${FILE} - ${DIAGRAM} - ${PAGENUM} / ${FULLPAGE}"
+          footter="${YEAR}-${MONTH}-${DAY} ${HOUR}:${DAY}"/></diagrams></businessAreas><databaseModel
+      UUID="DModel_S-TIsNaVEe6VaLuQsT3onQ" logicalName="새 데이터베이스" physicalName="NEW_DATABASE"><physicalProperties
+        xsi:type="o10g:DataDictionary" UUID="DDictionary_c--7sNabEe6VaLuQsT3onQ"><tablespaceGroup
+          UUID="TGroup_c--7sdabEe6VaLuQsT3onQ"/></physicalProperties><schema UUID="Schema_S-TIsdaVEe6VaLuQsT3onQ"
+        logicalName="내 스키마" physicalName="MY_SCHEMA"><tables UUID="Table_7Tz3BNaZEe6VaLuQsT3onQ"
+          logicalName="회원" physicalName="TABLE"><physicalProperties xsi:type="o10g:TableProperties"
+            UUID="TProperties_c--7stabEe6VaLuQsT3onQ"><storageAttributes UUID="PSAttributes_c--7s9abEe6VaLuQsT3onQ"><storage
+                UUID="SDetail_c--7tNabEe6VaLuQsT3onQ"/></storageAttributes></physicalProperties><columns
+            UUID="Column_7Tz3BdaZEe6VaLuQsT3onQ" logicalName="회원ID" physicalName="MemberID"
+            dataType="VARCHAR2(60)"><memberships UUID="MEntry_7Tz3BtaZEe6VaLuQsT3onQ"
+              key="PKCGroup_7Tz3DdaZEe6VaLuQsT3onQ"><value xsi:type="e:PrimaryKeyMembership"
+                UUID="PKMembership_7Tz3B9aZEe6VaLuQsT3onQ" group="PKCGroup_7Tz3DdaZEe6VaLuQsT3onQ"
+                entryIndex="0"/></memberships></columns><columns UUID="Column_7Tz3CNaZEe6VaLuQsT3onQ"
+            logicalName="이름" physicalName="Name" dataType="VARCHAR2(60)" notNull="TRUE"/><columns
+            UUID="Column_7Tz3CdaZEe6VaLuQsT3onQ" logicalName="이메일주소" physicalName="Emailaddress"
+            dataType="VARCHAR2(100)" notNull="TRUE"/><columns UUID="Column_7Tz3CtaZEe6VaLuQsT3onQ"
+            logicalName="생년월일" physicalName="birthdate" dataType="VARCHAR2(8)" notNull="TRUE"/><columns
+            UUID="Column_7Tz3C9aZEe6VaLuQsT3onQ" logicalName="닉네임" physicalName="Nickname"
+            dataType="VARCHAR2(100)" notNull="TRUE"/><columns UUID="Column_7Tz3DNaZEe6VaLuQsT3onQ"
+            logicalName="회원PW" physicalName="Password" dataType="VARCHAR2(60)" notNull="TRUE"/><columnGroups
+            xsi:type="e:PrimaryKeyColumnGroup" UUID="PKCGroup_7Tz3DdaZEe6VaLuQsT3onQ"
+            logicalName="회원 기본키" physicalName="PK_TABLE" derivedPhysicalName="true"
+            derivedLogicalName="true"><physicalProperties xsi:type="o10g:IndexProperties"
+              UUID="IProperties_c-_iwNabEe6VaLuQsT3onQ"><storageAttributes UUID="PSAttributes_c-_iwdabEe6VaLuQsT3onQ"><storage
+                  UUID="SDetail_c-_iwtabEe6VaLuQsT3onQ"/></storageAttributes></physicalProperties><primaryKeyConstraint
+              UUID="PKConstraint_7Tz3DtaZEe6VaLuQsT3onQ" logicalName="회원 기본키" physicalName="PK_TABLE"
+              derivedPhysicalName="true" derivedLogicalName="true"><physicalProperties
+                xsi:type="o10g:PrimaryKeyConstraintProperties" UUID="PKCProperties_c-_iw9abEe6VaLuQsT3onQ"/></primaryKeyConstraint></columnGroups><checkConstraints
+            UUID="CConstraint_c-_ixNabEe6VaLuQsT3onQ" logicalName="회원 체크 제약" physicalName="CK_TABLE"
+            derivedPhysicalName="true" derivedLogicalName="true"><physicalProperties
+              xsi:type="o10g:CheckConstraintProperties" UUID="CCProperties_c-_ixdabEe6VaLuQsT3onQ"/></checkConstraints></tables><tables
+          UUID="Table_7Tz3D9aZEe6VaLuQsT3onQ" logicalName="투표하기" physicalName="TABLE2"><columns
+            UUID="Column_7Tz3ENaZEe6VaLuQsT3onQ" logicalName="회원ID" physicalName="MemberID"
+            derivedPhysicalName="true" derivedLogicalName="true" dataType="VARCHAR2(60)"><memberships
+              UUID="MEntry_7Tz3EdaZEe6VaLuQsT3onQ" key="FKCGroup_7T0eE9aZEe6VaLuQsT3onQ"><value
+                xsi:type="e:ColumnReference" UUID="CReference_7Tz3EtaZEe6VaLuQsT3onQ"
+                group="FKCGroup_7T0eE9aZEe6VaLuQsT3onQ" parentColumn="Column_7Tz3BdaZEe6VaLuQsT3onQ"/></memberships><memberships
+              UUID="MEntry_7Tz3E9aZEe6VaLuQsT3onQ" key="PKCGroup_7T0eFdaZEe6VaLuQsT3onQ"><value
+                xsi:type="e:PrimaryKeyMembership" UUID="PKMembership_7Tz3FNaZEe6VaLuQsT3onQ"
+                group="PKCGroup_7T0eFdaZEe6VaLuQsT3onQ" entryIndex="0"/></memberships></columns><columns
+            UUID="Column_7Tz3FdaZEe6VaLuQsT3onQ" logicalName="설문조사번호" physicalName="COL3"
+            derivedLogicalName="true" dataType="NUMBER(5)"><memberships UUID="MEntry_7Tz3FtaZEe6VaLuQsT3onQ"
+              key="FKCGroup_7T0eF9aZEe6VaLuQsT3onQ"><value xsi:type="e:ColumnReference"
+                UUID="CReference_7Tz3F9aZEe6VaLuQsT3onQ" group="FKCGroup_7T0eF9aZEe6VaLuQsT3onQ"
+                parentColumn="Column_7T0eGtaZEe6VaLuQsT3onQ"/></memberships><memberships
+              UUID="MEntry_7T0eENaZEe6VaLuQsT3onQ" key="PKCGroup_7T0eFdaZEe6VaLuQsT3onQ"><value
+                xsi:type="e:PrimaryKeyMembership" UUID="PKMembership_7T0eEdaZEe6VaLuQsT3onQ"
+                group="PKCGroup_7T0eFdaZEe6VaLuQsT3onQ" entryIndex="0"/></memberships></columns><columns
+            UUID="Column_7T0eEtaZEe6VaLuQsT3onQ" logicalName="투표한 항목번호" physicalName="COL"
+            dataType="NUMBER(2)"/><columnGroups xsi:type="e:ForeignKeyColumnGroup"
+            UUID="FKCGroup_7T0eE9aZEe6VaLuQsT3onQ" logicalName="회원 -> 투표하기" physicalName="FK_TABLE_TO_TABLE2"
+            derivedPhysicalName="true" derivedLogicalName="true" parentColumnGroup="PKCGroup_7Tz3DdaZEe6VaLuQsT3onQ"><foreignKeyConstraint
+              UUID="FKConstraint_7T0eFNaZEe6VaLuQsT3onQ" logicalName="회원 -> 투표하기"
+              physicalName="FK_TABLE_TO_TABLE2" derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups><columnGroups
+            xsi:type="e:PrimaryKeyColumnGroup" UUID="PKCGroup_7T0eFdaZEe6VaLuQsT3onQ"
+            logicalName="투표하기 기본키" physicalName="PK_TABLE2" derivedPhysicalName="true"
+            derivedLogicalName="true"><primaryKeyConstraint UUID="PKConstraint_7T0eFtaZEe6VaLuQsT3onQ"
+              logicalName="투표하기 기본키" physicalName="PK_TABLE2" derivedPhysicalName="true"
+              derivedLogicalName="true"/></columnGroups><columnGroups xsi:type="e:ForeignKeyColumnGroup"
+            UUID="FKCGroup_7T0eF9aZEe6VaLuQsT3onQ" logicalName="설문조사 -> 투표하기" physicalName="FK_TABLE3_TO_TABLE2"
+            derivedPhysicalName="true" derivedLogicalName="true" parentColumnGroup="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"><foreignKeyConstraint
+              UUID="FKConstraint_7T0eGNaZEe6VaLuQsT3onQ" logicalName="설문조사 -> 투표하기"
+              physicalName="FK_TABLE3_TO_TABLE2" derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups></tables><tables
+          UUID="Table_7T0eGdaZEe6VaLuQsT3onQ" logicalName="설문조사" physicalName="TABLE3"><columns
+            UUID="Column_7T0eGtaZEe6VaLuQsT3onQ" logicalName="설문조사번호" physicalName="COL"
+            dataType="NUMBER(5)"><memberships UUID="MEntry_7T0eG9aZEe6VaLuQsT3onQ"
+              key="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"><value xsi:type="e:PrimaryKeyMembership"
+                UUID="PKMembership_7T0eHNaZEe6VaLuQsT3onQ" group="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"
+                entryIndex="0"/></memberships></columns><columns UUID="Column_7T0eHdaZEe6VaLuQsT3onQ"
+            logicalName="조사내용" physicalName="COL2" dataType="VARCHAR2(200)"/><columns
+            UUID="Column_7T0eHtaZEe6VaLuQsT3onQ" logicalName="시작일" physicalName="COL3"
+            dataType="DATE"/><columns UUID="Column_7T0eH9aZEe6VaLuQsT3onQ" logicalName="종료일"
+            physicalName="COL4" dataType="DATE"/><columns UUID="Column_7T0eINaZEe6VaLuQsT3onQ"
+            logicalName="항목수" physicalName="COL5" dataType="NUMBER(2)"/><columns UUID="Column_7T0eIdaZEe6VaLuQsT3onQ"
+            logicalName="상태" physicalName="COL6" dataType="VARCHAR2(3 char)"/><columns
+            UUID="Column_7T0eItaZEe6VaLuQsT3onQ" logicalName="작성일" physicalName="COL7"
+            dataType="DATE"/><columnGroups xsi:type="e:PrimaryKeyColumnGroup" UUID="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"
+            logicalName="설문조사 기본키" physicalName="PK_TABLE3" derivedPhysicalName="true"
+            derivedLogicalName="true"><primaryKeyConstraint UUID="PKConstraint_7T1FINaZEe6VaLuQsT3onQ"
+              logicalName="설문조사 기본키" physicalName="PK_TABLE3" derivedPhysicalName="true"
+              derivedLogicalName="true"/></columnGroups></tables><tables UUID="Table_7T1FIdaZEe6VaLuQsT3onQ"
+          logicalName="항목" physicalName="TABLE4"><columns UUID="Column_7T1FItaZEe6VaLuQsT3onQ"
+            logicalName="설문조사번호2" physicalName="COL3" dataType="NUMBER(5)"><memberships
+              UUID="MEntry_7T1FI9aZEe6VaLuQsT3onQ" key="FKCGroup_7T1FLdaZEe6VaLuQsT3onQ"><value
+                xsi:type="e:ColumnReference" UUID="CReference_7T1FJNaZEe6VaLuQsT3onQ"
+                group="FKCGroup_7T1FLdaZEe6VaLuQsT3onQ" parentColumn="Column_7T0eGtaZEe6VaLuQsT3onQ"/></memberships><memberships
+              UUID="MEntry_7T1FJdaZEe6VaLuQsT3onQ" key="PKCGroup_7T1FL9aZEe6VaLuQsT3onQ"><value
+                xsi:type="e:PrimaryKeyMembership" UUID="PKMembership_7T1FJtaZEe6VaLuQsT3onQ"
+                group="PKCGroup_7T1FL9aZEe6VaLuQsT3onQ" entryIndex="0"/></memberships></columns><columns
+            UUID="Column_7T1FJ9aZEe6VaLuQsT3onQ" logicalName="항목1" physicalName="COL2"
+            dataType="VARCHAR2(50)"/><columns UUID="Column_7T1FKNaZEe6VaLuQsT3onQ"
+            logicalName="항목2" physicalName="COL" dataType="VARCHAR2(50)"/><columns
+            UUID="Column_7T1FKdaZEe6VaLuQsT3onQ" logicalName="항목3" physicalName="COL4"
+            dataType="VARCHAR2(50)"/><columns UUID="Column_7T1FKtaZEe6VaLuQsT3onQ"
+            logicalName="항목4" physicalName="COL5" dataType="VARCHAR2(50)"/><columns
+            UUID="Column_7T1FK9aZEe6VaLuQsT3onQ" logicalName="항목5" physicalName="COL6"
+            dataType="VARCHAR2(50)"/><columns UUID="Column_7T1FLNaZEe6VaLuQsT3onQ"
+            logicalName="항목6" physicalName="COL7" dataType="VARCHAR2(50)"/><columnGroups
+            xsi:type="e:ForeignKeyColumnGroup" UUID="FKCGroup_7T1FLdaZEe6VaLuQsT3onQ"
+            logicalName="설문조사 -> 항목" physicalName="FK_TABLE3_TO_TABLE4" derivedPhysicalName="true"
+            derivedLogicalName="true" parentColumnGroup="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"><foreignKeyConstraint
+              UUID="FKConstraint_7T1FLtaZEe6VaLuQsT3onQ" logicalName="설문조사 -> 항목"
+              physicalName="FK_TABLE3_TO_TABLE4" derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups><columnGroups
+            xsi:type="e:PrimaryKeyColumnGroup" UUID="PKCGroup_7T1FL9aZEe6VaLuQsT3onQ"
+            logicalName="항목 기본키" physicalName="PK_TABLE4" derivedPhysicalName="true"
+            derivedLogicalName="true"><primaryKeyConstraint UUID="PKConstraint_7T1FMNaZEe6VaLuQsT3onQ"
+              logicalName="항목 기본키" physicalName="PK_TABLE4" derivedPhysicalName="true"
+              derivedLogicalName="true"/></columnGroups></tables><tables UUID="Table_7T1FMdaZEe6VaLuQsT3onQ"
+          logicalName="관리자" physicalName="TABLE5"><columns UUID="Column_7T1FMtaZEe6VaLuQsT3onQ"
+            logicalName="관리자ID" physicalName="id" dataType="VARCHAR2(60)"><memberships
+              UUID="MEntry_7T1FM9aZEe6VaLuQsT3onQ" key="PKCGroup_7T1FOtaZEe6VaLuQsT3onQ"><value
+                xsi:type="e:PrimaryKeyMembership" UUID="PKMembership_7T1FNNaZEe6VaLuQsT3onQ"
+                group="PKCGroup_7T1FOtaZEe6VaLuQsT3onQ"/></memberships></columns><columns
+            UUID="Column_7T1FNdaZEe6VaLuQsT3onQ" logicalName="이름" physicalName="COL"
+            dataType="VARCHAR2(60)"/><columns UUID="Column_7T1FNtaZEe6VaLuQsT3onQ"
+            logicalName="이메일주소" physicalName="COL2" dataType="VARCHAR2(100)"/><columns
+            UUID="Column_7T1FN9aZEe6VaLuQsT3onQ" logicalName="생년월일" physicalName="COL3"
+            dataType="VARCHAR2(8)"/><columns UUID="Column_7T1FONaZEe6VaLuQsT3onQ"
+            logicalName="닉네임" physicalName="COL4" dataType="VARCHAR2(100)"/><columns
+            UUID="Column_7T1FOdaZEe6VaLuQsT3onQ" logicalName="관리자PW" physicalName="COL5"
+            dataType="VARCHAR2(60)"/><columnGroups xsi:type="e:PrimaryKeyColumnGroup"
+            UUID="PKCGroup_7T1FOtaZEe6VaLuQsT3onQ" logicalName="관리자 기본키" physicalName="PK_TABLE5"
+            derivedPhysicalName="true" derivedLogicalName="true"><primaryKeyConstraint
+              UUID="PKConstraint_7T1FO9aZEe6VaLuQsT3onQ" logicalName="관리자 기본키" physicalName="PK_TABLE5"
+              derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups></tables><tables
+          UUID="Table_7T1FPNaZEe6VaLuQsT3onQ" logicalName="작성/수정/삭제" physicalName="TABLE6"><columns
+            UUID="Column_7T1sMNaZEe6VaLuQsT3onQ" logicalName="설문조사번호" physicalName="COL2"
+            derivedLogicalName="true" dataType="NUMBER(5)"><memberships UUID="MEntry_7T1sMdaZEe6VaLuQsT3onQ"
+              key="FKCGroup_7T1sNtaZEe6VaLuQsT3onQ"><value xsi:type="e:ColumnReference"
+                UUID="CReference_7T1sMtaZEe6VaLuQsT3onQ" group="FKCGroup_7T1sNtaZEe6VaLuQsT3onQ"
+                parentColumn="Column_7T0eGtaZEe6VaLuQsT3onQ"/></memberships></columns><columns
+            UUID="Column_7T1sM9aZEe6VaLuQsT3onQ" logicalName="관리자ID" physicalName="id"
+            derivedPhysicalName="true" dataType="VARCHAR2(60)"><memberships UUID="MEntry_7T1sNNaZEe6VaLuQsT3onQ"
+              key="FKCGroup_7T1sONaZEe6VaLuQsT3onQ"><value xsi:type="e:ColumnReference"
+                UUID="CReference_7T1sNdaZEe6VaLuQsT3onQ" group="FKCGroup_7T1sONaZEe6VaLuQsT3onQ"
+                parentColumn="Column_7T1FMtaZEe6VaLuQsT3onQ"/></memberships></columns><columnGroups
+            xsi:type="e:ForeignKeyColumnGroup" UUID="FKCGroup_7T1sNtaZEe6VaLuQsT3onQ"
+            logicalName="설문조사 -> 작성/수정/삭제" physicalName="FK_TABLE3_TO_TABLE6" derivedPhysicalName="true"
+            derivedLogicalName="true" parentColumnGroup="PKCGroup_7T0eI9aZEe6VaLuQsT3onQ"><foreignKeyConstraint
+              UUID="FKConstraint_7T1sN9aZEe6VaLuQsT3onQ" logicalName="설문조사 -> 작성/수정/삭제"
+              physicalName="FK_TABLE3_TO_TABLE6" derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups><columnGroups
+            xsi:type="e:ForeignKeyColumnGroup" UUID="FKCGroup_7T1sONaZEe6VaLuQsT3onQ"
+            logicalName="관리자 -> 작성/수정/삭제" physicalName="FK_TABLE5_TO_TABLE6" derivedPhysicalName="true"
+            derivedLogicalName="true" parentColumnGroup="PKCGroup_7T1FOtaZEe6VaLuQsT3onQ"><foreignKeyConstraint
+              UUID="FKConstraint_7T1sOdaZEe6VaLuQsT3onQ" logicalName="관리자 -> 작성/수정/삭제"
+              physicalName="FK_TABLE5_TO_TABLE6" derivedPhysicalName="true" derivedLogicalName="true"/></columnGroups></tables></schema></databaseModel><sharedIcons
+      UUID="SIcons_S-TIstaVEe6VaLuQsT3onQ"/></e:Document>

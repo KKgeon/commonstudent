@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+<!--
+http://localhost/webPro/html/days05/ex06_ok.jsp
+?
+uid=hong
+&
+pwd=1234
+  -->
+<form action="ex06_ok.jsp" id="form1" method="get" target="self" enctype="application/x-www-form-urlencoded">
+아이디 : <input type="text" id="uid" name="uid" value="hong"><br>
+비밀번호 : <input type="password" id="pwd" name="pwd" value="1234"><br>
+<input type="submit" 
+	formaction="ex100_ok.jsp" 
+	formmethod="post" 
+	formtarget="_blank" 
+	formenctype="multipart/form-data">
+</form>
+<!-- 청부파일이 있을 경우에는 multipart/form-data 설정  -->
+
+
+
+<input type="email" id="email" name="email" value="hong@sist.com" form="form1"/>
+
+
+자동차 선택:
+<select>
+<optgroup label="국산차"><option>k09</option>
+<option>G80</option></optgroup>
+
+<optgroup label="외제차"><option>Volvo</option>
+<option>BMW</option></optgroup>
+
+</select>
+</body>
+</html>

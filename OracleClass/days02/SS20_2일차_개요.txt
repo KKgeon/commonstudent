@@ -1,0 +1,268 @@
+﻿Ora_Help.zip
+2. Oracle 설치
+  ㄴ  C:\oraclexe 폴더 
+  ㄴ  Oracle Database 11g  XE ( Express Edition )
+          Oracle Database 8i, 9i      i == internet
+          Oracle Database 10g, 11g    g == grid( 그리드 )  
+          Oracle Database 19c, 21c    c == cloud
+  ㄴ DBA계정( SYS, SYSTEM )- ss123$
+
+3. Oracle Edition
+  1) Enterprise Edition(EE) - CPU 4 이상
+  2) Standard Edition(SE) - 모든 기본 기능 지원, CPU 4개 이하, 
+  3) *** Express Edition(XE)  - 무료  CPU 1개
+  4) Standard Edition ONE( SEO )
+  5) Personal Edition (PE) - 개인용 ( 1명 )
+  6) Oracle Database Lite  - 모바일( mobile )용
+
+4. 클라이언트 도구 
+  ㄴ https://www.oracle.com/database/sqldeveloper/technologies/download/
+  ㄴ Windows 64-bit with JDK 11 included
+     ㄴ sqldeveloper-23.1.1.345.2114-x64.zip
+
+5. 오라클 삭제
+  1) 주요 오라클 서비스 중지
+     OracleService    XE
+     OracleService + [SID명]
+
+     OracleXETNSListener  ? 네트워크를 통해서 오라클 서버와 클라이언트의 
+                            연결을 담당하는 프로그램
+     
+  2) uninstall.exe
+  3) C:\oraclexe 폴더 삭제
+  4) 레지스트리 삭제
+     HKEY_LOCAL_MACHINE 폴더의 하위 4개 곳 삭제...
+
+6. DB 개요
+  1) Data(데이터)
+    ㄴ 의미가 있는 정보를 가진 모든 값
+    ㄴ 정보(information) - 의미를 부여한 값(결과) 
+    ㄴ 재료, 자료, 논거 라는 뜻인 "datum"의 복수형이다.
+  
+  2) DB( DataBase = Data + Base )
+    ㄴ Data(자료) + Base(저장소)
+    ㄴ 공유되어 사용될 목적으로 통합 관리되는 "데이터의 집합"
+    ㄴ 현실 세계에서 존재하는 유형, 무형 등 방대한 정보(==자료)의 집합.
+
+  3) DBMS( DataBase Management System )
+    ㄴ 데이터의 집합 + 효율적으로 관리하는 시스템
+    ㄴ 소프트웨어
+    ㄴ 오라클사(Oracle), 오라클사(My SQL), MS사( MS SQL )
+
+7. 방화벽 해제 ( 1521 port )
+
+10:02 수업시작~
+8. 용어 
+  1) 오라클 서버( Oracle Server )
+      ㄴ 오라클이 설치된 본인 컴퓨터
+      ㄴ 오라클 데이터베이스 + 오라클 인스턴스로 구성된다.
+  2) 오라클 데이터베이스( Oracle Database )
+      ㄴ 오라클 데이터베이스 시스템 그 자체
+  3) 오라클 인스턴스( Oracle Instance )
+      ㄴ 물리적인 파일에 접근하고 DB를 관리하기 위한 수단.
+      ㄴ SGA(메모리 영역) + Background Process 구성
+
+  4) 전역 데이터베이스 이름
+      ㄴ 전세계에서 유일한 이름
+      ㄴ Global Database Name
+      ㄴ "데이터베이스명.도메인명"
+      ㄴ XE
+      ㄴ 오라클 데이터베이스를 식별하기 위한 고유한 이름
+
+  5) SID(System Identifier 시스템식별자 )
+      ㄴ 오라클 인스턴스를 식별하기 위한 고유한 이름
+      ㄴ XE
+  
+  참고) "데이터베이스명" == SID 
+               XE        == XE   
+
+  6) 오라클 서버 +  연결해서 데이터를 효율적으로 관리하는 도구
+     ㄴ SQL Plus 툴( 오라클 설치하면 자동으로 설치된다. )
+     ㄴ Sql Developer 툴
+     ㄴ 토드(Toad) - 가장 널리 사용되는 도구, 유료 X
+
+  7) tnsnames.ora 파일
+     ㄴ  .ora  ( .oracle 설정파일 )
+     ㄴ 본인컴퓨터와 오라클 데이터베이스 연결 설정 정보 : tnsnames.ora 파일
+
+  8) 데이터(data)를 효율적으로 관리하는 시스템( DBMS )
+     ㄴ 물리적 데이터 저장 (   .DBF 또는  .ora  )
+     ㄴ C:\oraclexe\app\oracle\oradata\XE
+         (1) SYSTEM.DBF - SYS, SYSTEM DBA가 소유한 객체 저장소
+         (2) TEMP.DBF   - 임시 저장소
+                          SQL 문장이 실행될 때 정렬 작업을 위해 마련된 공간.
+         (3) UNDOTBS1.DBF - UNDO 취소( 되돌리기)
+                        - ROLLBACK을 위한 저장소   
+         (4) USERS.DBF  - 일반 사용자들의 저장소
+           등등
+
+     프로젝트진행    - 테이블스페이스 생성
+                         TEAMX  ->   TEAMX.DBF  --> 백업 / 복원
+
+  9) 논리적 개념 : 테이블스페이스(tablespace) > 세그먼트(segment) > 익스텐드(extent) > 데이터블럭(data block)
+
+
+
+  C:\E\Class\SS20Class\Workspace
+                          ㄴ JavaClass
+                             ㄴ javaPro
+                                ㄴ src
+                                    ㄴ days01
+                                    ㄴ days02
+                          ㄴ OracleClass
+                             ㄴ days01
+                             ㄴ days02
+                                  :
+
+
+ 9.   본인PC                        본인PC
+    오라클 서버 + 연결(접속) +   클라이언트도구
+                  로그인(인증)+권한
+                  데이터 관리 질의/응답
+
+   1) SQL Plus 도구
+	C:\Windows\System32>sqlplus /?
+        Use SQL*Plus to execute SQL, PL/SQL and [SQL*Plus statements].
+        C:\Windows\System32>sqlplus sys/ss123$@localhost:1521/XE AS SYSDBA
+        C:\Windows\System32>sqlplus sys/ss123$ AS SYSDBA
+        C:\Windows\System32>sqlplus / AS SYSDBA
+        SQL>_
+   시험) SQL PLus 도구를 사용해서 sys계정으로 로그인하고
+         로그인한 계정 확인   show user
+         모든 사용자 계정을 조회(검색)   [ SQL문 사용 ]
+         SQL> SELECT *
+           2  FROM all_users;
+         DB 연결 종료..
+         SQL> disconnect  
+	 SQL> exit
+
+	 C:\Windows\System32>_
+
+   시험)
+        (1) SQL
+         ㄴ Structured Query Language(SQL)
+         ㄴ 구조화된   쿼리(질의) 언어
+   시험) ㄴ SQL 5가지 종류 
+             1) DQL (데이터 검색) - SELECT문
+             2) DDL (데이터 구조 생성, 삭제, 수정) - CREATE, DROP, ALTER
+             3) DML (테이블(table)==릴레이션  레코드(행) 삽입,삭제,수정 ) - INSERT, DELETE, UPDATE                        RENAME, TRUNCATE
+             4) DCL ( DB 접근 권한 부여, 제거 ) - GRANT, REVOKE문
+             5) TCL ( 트랜잭션 처리 ) - COMMIT, ROLLBACK, SAVE POINT
+         ㄴ 
+         ㄴ 
+         ㄴ 
+         ㄴ 
+        (2) PL/SQL
+         ㄴ PL(Procedural Language) + SQL
+          
+
+       SHOW 명령어는 현재 세션에 설정된 시스템 변수를 확인하기 위한 명령어이다.
+       SHOW Option
+            user    사용자 이름 확인    
+	SQL> show user
+	USER is "SYS"
+	SQL> 
+
+
+10. SQL Developer 도구 사용~~ 
+
+C:\Windows\System32>sqlplus
+
+SQL*Plus: Release 11.2.0.2.0 Production on 화 2월 13 14:00:55 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name: SYS AS SYSDBA
+Enter password:
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> show user
+USER is "SYS"
+SQL> DISCONNECT
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+SQL> CONNECT
+Enter user-name: SCOTT
+Enter password:
+Connected.
+SQL> SHOW user
+USER is "SCOTT"
+SQL>
+
+로그인을 할려면 CREATE SESSION 권한이 필요하다. 로그인 실패
+ORA-01045: user SCOTT lacks CREATE SESSION privilege; logon denied
+
+SCOTT 계정에 권한이 있는 계정이 CREATE SESSION 권한을 부여~
+
+-- SQL 5가지 중  권한 부여/회수 설명
+-- 롤(Role:역할)  설명  
+
+   예) 회사
+    계정(사용자)                        다양한 권한
+    :
+    :
+    :
+    권맑음(새로운 계정 생성)            a1,a2,..a100 권한 - 신입사원권한
+                                        s1....s200  권한 - 영업부 부서원 권한
+
+   GRANT  a1,a2...., a100  TO 권맑음  -> a1~a100 신입사원 권한 회수
+GRANT  s1,s2...., s200  TO 권맑음
+
+   역할(role)
+
+   신입사원역할 : a1~a100 권한 부여
+  GRANT a1~a100 a11X  TO 신입사원역할
+  GRANT s1~s200  TO 영업사원역할
+
+
+  GRANT 신입사원역할   TO 권맑음
+
+11. 데이터 모델 ? 컴퓨터에 데이터를 저장하는 방식을 정의해 놓은 개념 모델
+  데이터 모델의 종류 - 계층형, 네트워크형, ***관계형***, 객체 지향적 데이터 모델등등
+  현대에서 가장 많이 사용하는 데이터 모델 - 관계형 데이터 모델
+11-2. 관계형 데이터 모델( R(관계형) + DBMS )
+  1) 데이터 간의 관계에 초점을 둔 모델
+  2) 데이터 저장소(테이블)과 테이블 간의 관계에 초점을 둔 모델
+
+5:03 수업시작~
+11-3. 관계형 데이터 모델의 핵심 구성 요소.
+  1) 개체(Entity) - 데이터를 저장하는 가장 작은 단위 = RDMBS 테이블(table) == 릴레이션(relation)
+  2) 속성(Attribute) - 개체의 특징, 종류, 상태 ==            컬럼(열 column)
+  3) 관계(Relationship) - 개체와 개체 간의 연관성
+
+ 예)  SCOTT - dept, emp 테이블생성
+
+   dept 부서 개체(E)                 emp 사원 개체(E)
+   속성(A)
+   부서번호                           사원번호
+   부서명                             사원명
+   지역명                             입사일자
+                                         :
+                                      부서번호(참조)
+  
+                       소속 관계(R)
+
+ 예)    상품 개체                  고객 개체
+                       주문 관계
+
+
+12. DBA == DB(database) + A(administrator) == 데이터베이스 관리자
+    오라클 DBA 계정 : SYS > SYSTEM
+
+13. 테이블(table) ? 데이터를 저장하는 가장 작은 단위
+    테이블스페이스(tablespace) ? 논리적 단위 중에 데이터를 저장하는  가장 상위 개념
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+

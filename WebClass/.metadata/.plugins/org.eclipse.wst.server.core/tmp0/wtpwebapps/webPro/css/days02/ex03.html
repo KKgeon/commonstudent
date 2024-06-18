@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul {
+            list-style-type: lower-roman;
+            /* 이미지를 목록항목(마커)로 지정할 수 있다  */
+            list-style-image: url('../images/sqpurple.gif');
+        }
+
+        /* 목록항목의 마커 위치 설정 list-style-position: ;*/
+        ul.a{
+            list-style-position: inside;
+        }
+        ul.b{
+            list-style-position: outside;
+        }
+        ul li{
+            border: 1px solid gray;
+        }
+
+        /* ul ol 기본 설정 제거 */
+        ul ol{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+    순서 없는 목록 : ul, li     d,c,s
+    순서 있는 목록 : ol, li     1,i,a
+
+    list 약식
+    ul{
+        list-style: squre insid url('마커경로')
+    }
+
+</pre>
+    <ul class="a">
+        <li>Lorem.</li>
+        <li>Accusamus!</li>
+        <li>Expedita!</li>
+    </ul>
+    <ul class="b">
+        <li>Lorem.</li>
+        <li>Accusamus!</li>
+        <li>Expedita!</li>
+    </ul>
+    <ol>
+        <li>Lorem.</li>
+        <li>Accusamus!</li>
+        <li>Expedita!</li>
+    </ol>
+</body>
+
+</html>

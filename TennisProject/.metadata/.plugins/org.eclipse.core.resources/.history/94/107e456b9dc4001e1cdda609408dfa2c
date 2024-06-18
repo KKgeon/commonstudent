@@ -1,0 +1,75 @@
+package tennisScoreView;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TennisSetting {
+	public static void main(String[] args) throws IOException {
+
+		chooseSoloDuo();
+		
+
+		chooseTeamMember();
+
+	}//m
+
+	
+	
+	
+	private static int chooseSoloDuo() throws IOException {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("경기방식을 선택하십시오\n1. 단식\t 2.복식");
+
+		int choose = sc.nextInt();
+		if (choose==1) {
+			System.out.println("단식 경기를 선택하셨습니다");
+		}else if(choose==2) {
+			System.out.println("복식 경기를 선택하셨습니다");
+		} else {
+			System.out.println("잘못 된 입력입니다.");
+		}
+		
+		
+		return choose;
+			
+	}//choosenSoloDuo()
+	
+	
+	
+	private static void chooseTeamMember() {
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<TennisPlayer> TennisPlayers = new ArrayList<TennisPlayer>();
+		
+        while (TennisPlayers.size() < 4) {
+        	System.out.println("팀원을 선정하십시오");
+            String playerName = sc.nextLine();
+            
+    		
+    		System.out.println("");
+    		TennisPlayers.add(new TennisPlayer("남자선수1", true));
+    		TennisPlayers.add(new TennisPlayer("남자선수2", true));
+    		TennisPlayers.add(new TennisPlayer("남자선수3", true));
+    		TennisPlayers.add(new TennisPlayer("여자선수1", false));
+    		TennisPlayers.add(new TennisPlayer("여자선수2", false));
+    		TennisPlayers.add(new TennisPlayer("여자선수3", false));
+          
+
+            System.out.println("Player added. Total players: " + TennisPlayers.size());
+        }
+
+        System.out.println("4 players added. Program exiting.");
+    }
+
+		
+
+
+
+
+
+
+
+
+
+}//c

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/favicon.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+input[type="range"] {
+  appearance: slider-vertical;
+}
+</style>
+
+</head>
+<body onload="init()">
+	<form>
+		색상 : <input id="color" type="color" /> <br /> 설문 시작 날짜 : <input
+			id="survey_start" type="date" /> <br /> 설문 종료 날짜 : <input
+			id="survey_end" type="date" min="2024-01-01" max="2024-12-31" /> <br />
+		<input type="datetime-local" /> <br /> <input type="datetime" /> <br />
+		첨부파일 : <input type="file" id="attach" name="attach" /> <br /> 다중첨부파일
+		: <input multiple="multiple" type="file" id="attach" name="attach" />
+		<br />
+		<!-- 
+다른 웹 페이지를 요청할 때 히든값을 넘겨서 상태관리하는 방법 중에 하나이다.
+ -->
+		<input type="hidden" value="1234" /> <br /> <input type="image"
+			src="../images/17797133000319380837.png" /> <br /> <input
+			type="month" /> <br /> <input type="number" value="1" min="0"
+			max="100" /> <br /> <input type="range" id="ran" value="30" min="0"
+			max="100" /> <br /> <input id="btn" type="button" value="확인" />
+	</form>
+
+	<div id="demo">우하하</div>
+
+
+
+	<script>
+		let btn = document.getElementById("btn");
+		let color = document.getElementById("color");
+		let demo = document.getElementById("demo");
+
+		let s_start = document.getElementById("survey_start");
+		let s_end = document.getElementById("survey_end");
+		btn.onclick = function() {
+
+			// 		demo.innerText = "hex : " + color.value;
+			// 		demo.style.color = color.value;
+			demo.innerText = s_start.value + " ~ " + s_end.value;
+		}
+		/* 
+		function init() {
+		const range = document.getElementById("ran");
+		range.addEventListener("input", (event) => {
+		// 		  value.textContent = event.target.value;
+		demo.innerText = range.value;
+		});
+		} */
+
+		range.oninput = function () {
+			demo.innerText = this.value;
+
+		}
+	</script>
+</body>
+</html>

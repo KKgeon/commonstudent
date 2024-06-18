@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [js 함수]
+    1. function 함수명 ([매개변수...]){
+        //코딩
+
+        [return 리턴값;]
+    }
+    2. 익명함수를 선언하고 변수로 저장.
+    let 변수명 = function(){
+
+    };
+    변수명();
+
+    3. Function 객체생성자
+
+    const sum = new Function("a","b","return a+b");
+    alert(sum(1,2));
+
+    4. 현재 범위의 맨위로 변수, 함수 선언 부분을 이동
+    : js 호이스팅
+    (주의) 함수 표현식을 사용하여 정의된 함수는 호이스팅 되지 않는다.
+    function test(){
+
+    }
+    test();
+
+    5. 자체 호출 함수
+
+        1. 함수 표현식
+        2. 자기 자신 함수 호출
+
+        예)
+        function hi(){
+            return "hello world";
+        }
+
+        hi();
+        hi();
+        hi();
+        예)
+        let hi = function(){
+            return "hello world";
+        }
+
+        hi();
+        hi();
+        hi();
+
+        예) 자체 호출 함수
+        (function(){
+            return "hello world";
+        })();
+
+        -- function도 객체이다.
+
+
+        6. 
+        function test(a,b,c,d =0){
+            //
+            //
+            if(c== undefined) c=0;
+        }
+
+        test(1,2,3);
+        test(1,2);
+
+
+        //          가변인자
+        function sum(...args){
+            let result = 0;
+            for( let i of args){
+                result += i;
+            }
+            return result;
+        }
+
+        sum(1,2,4,5,5,3,5,3,5);
+        sum(1,2,4);
+
+
+        window.sum();
+        window.test();
+
+        let a;
+        window.a; //전역변수
+
+        this == window
+
+  </xmp>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/favicon.ico">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	
+</script>
+</head>
+<body>
+	<button id="btn1" type="button">Hide</button>
+
+	<div id="demo" style="border: 1px solid gray">
+		<h3>
+			안녕하세요. 홍길동입니다.<br>
+		</h3>
+		<p>
+			안녕하세요. 홍길동입니다.<br>
+		</p>
+		<div>
+			안녕하세요. 홍길동입니다.<br>
+		</div>
+		안녕하세요. <span>홍길동</span>입니다.<br>
+	</div>
+
+
+	<script>
+		// 			var sw = false;
+		// 		$("#btn1").click(function() {
+		// 			// 			$("#demo").css("스타일속성","속성값");
+		// 			$("#demo").css("display", sw ?"block": "none");
+		// 			$(this).text(sw ? "Hide": "Show");
+		// // 			sw?$("#demo").css("display", "none"):$("#demo").css("display", "block");
+		// 			sw=!sw;
+	
+		$("#btn1").click(function() {
+			// 				$("#demo").css("display", sw ?"block": "none");
+			// 			if (sw) {
+			// 				$("#demo").hide();
+			// 			} else {
+			// 				$("#demo").show();
+			// 			}
+			$("#demo").toggle();
+			
+// 			var btnText = $(this).text();
+			$(this).text((this).text=="Hide"?"Show":"Hide");
+		});
+	</script>
+</body>
+</html>

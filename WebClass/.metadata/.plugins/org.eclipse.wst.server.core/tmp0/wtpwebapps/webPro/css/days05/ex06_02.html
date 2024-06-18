@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-container {
+            background-color: green;
+            padding: 10px;
+            display: grid;
+
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            
+            /* justify-content 속성 
+            컨테이너 내부의 그리드 전체를
+            정렬하는데 사용되는 속성
+            (주의) 그리드 전체 너비 < 컨테이너 너비*/
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: start; (기본값) */
+            /* justify-content: end; */
+            height: 480px;
+            
+            /* 컨테이너 내부의 전체 그리드를 수직으로 정렬 */
+            /* align-content: center; */
+            /* align-content: space-between; */
+            /* align-content: space-around; */
+            /* align-content: space-evenly; */
+            /* align-content: start; */
+            align-content: end;
+
+        }
+
+        .grid-container>div {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+    [css grid 배치]
+    css grid 레이아웃 모듈은 
+    행, 열 있는 그리드(격자 무늬) 기반
+    레이아웃 시스템
+    float, position 레이아웃 X
+    - css grid 배치 쪽이 배치 더 쉽고, 유지 보수 더 쉽다 (장점)
+    - 컨테이너(상위 요소)
+      여러 개의 항복 (하위 요소)
+
+</pre>
+
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+
+</html>

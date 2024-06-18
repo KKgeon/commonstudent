@@ -1,0 +1,139 @@
+
+1. SQL 이란 ?  p 142 설명~
+  - 구조화된    질의   언어
+  - Structered query language
+  - 오라클 서버           <- 질의할 때 사용되는 언어           클라이언트
+                            구조(형식)
+
+1-2. SQL의 5가지 종류 
+   ㄱ. DQL - SELECT
+   ㄴ. DDL(데이터 정의어) - CREATE, ALTER, DROP
+                          CREATE USER   ALTER USER     DROP USER
+                          CREATE TABLE  ALTER TABLE    DROP TABLE
+                            :
+                          CREATE  XXX   ALTER XXX      DROP XXX
+                          
+   ㄷ. DML(데이터 조작어) - DELETE, INSERT, UPDATE,     RENAME, TRUNCATE
+                          COMMIT(완료), ROLLBACK(취소)
+   ㄹ. DCL(데이터 제어어) - GRANT, REVOKE
+   ㅁ. TCL( 트랜잭션   ) - COMMIT, ROLLBACK, SAVE POINT
+
+2. PL/SQL 이란 ?  PL + SQL
+                절차적인 언어 문법이 추가된  SQL
+   
+3. RDBMS 란 ? 
+    DATA
+    DATABASE
+    DBMS  - Oracle
+    데이터 모델 - 관계형
+    R + DBMS
+    
+4. SQL을 작성하세요.
+   ㄱ. 모든 사용자 정보를 조회하는 SQL을 작성하세요.
+    
+      데이터 딕셔너리 = 테이블, 뷰 모음
+      데이터 사전
+      자료 사전
+   
+      SELECT * FROM dba_users;  -- 뷰(view) 모든 사용자
+      SELECT * FROM all_users;  --          모든 사용자
+      SELECT * FROM user_users; -- 현재 접속자의 사용자 정보 조회
+      
+      dba_XXX
+      all_XXX
+      user_XXX
+      V$_XXX
+      X$_XXX
+      
+   ㄴ. scott 소유의 모든 테이블 정보를 조회하는 SQL을 작성하세요.
+
+    SELECT * FROM dba_tables;
+    SELECT * FROM all_tables;
+    
+    SELECT * FROM user_tables;
+    SELECT * FROM tabs; -- 동의어(약어)
+    
+5. DBA 란 ? DB 관리자
+            SYS > SYSTEM
+
+오라클서버 = 오라클 데이터베이스 + 오라클 인스턴스
+           전역데이터베이스이름   시스템식별자(SID)
+           "XE"."도메인명"         XE
+6. SID 란 ? 
+6-2. 전역 데이터베이스 이름 이란?    
+
+7. "데이터 모델"이란 ?  
+
+8. 관계형 데이터 모델의 핵심 구성 요소 
+  ㄱ. attribute
+  ㄴ. entity
+  ㄷ. relationship
+  
+9. 테이블 ( table )?  
+   데이터 저장소
+  
+9-2. 테이블 스페이스 ?     .DBF
+
+10. 단축키를 적으세요.
+  ㄱ. SQL 작성 후 실행하는 방법    :
+      (1)   ctrl + enter
+      (2)   F9
+      (3)   F5
+  ㄴ. 주석 처리하는 방법           :  ctrl + /
+
+11. 오라클 삭제하는 순서를 적으세요. 
+   ㄱ. 서비스에서 Database Service xm 작동중지
+   ㄴ. 제어판에서 오라클 삭제
+   ㄷ. c드라이브 오라클 폴더 삭제
+   ㄹ. 레포지토리 무슨 폴더 하위 폴더 오라클 폴더 삭제
+
+12. Sqlplus.exe 를  사용해서
+   ㄱ. sys 계정으로 로그인하고       
+   ㄴ. 로그인한 계정을 확인하고   
+   ㄷ. 모든 사용자 계정 조회하고
+   ㄹ. 연결종료하는 코딩을 하세요. 
+
+13. tnsnames.ora 파일의 용도를 설명하세요. 
+    
+14.  오라클 설치 후 주요 오라클 서비스 2가지       ***  
+  ㄱ.  OracleService[SID]
+  ㄴ.  Oracle[SID]Listener
+  ( 수업 시작 전에 반드시 확인 사항이죠.... )
+
+15. SQL은 기본 [ (1) 테이블    ] , [ (2) 뷰   ]을 대상으로 수행된다.  
+
+16. scott / 1234  계정 생성하는 SQL 작성  
+CREATE USER SCOTT
+IDENTIFIED BY 1234;
+16-2. scott 계정의 비밀번호를 tiger 수정하는 SQL 작성
+ALTER USER SCOTT
+IDENTIFIED BY tiger;
+16-3. scott 계정 삭제하는 SQL 작성
+DROP USER SCOTT CASCADE; 
+
+17. HR 계정의 유무를 확인하고
+    HR 계정의 접속하는데 있어서 문제점 파악 및 해결.
+SELECT *
+FROM all_users;
+
+PASSWORD HR; 비밀번호 변경
+
+계정이 언락되어있다고 뜨는데
+ALTER USER scott ACCOUNT UNLOCK;
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+      

@@ -1,0 +1,5 @@
+# /jspPro  X  request URL=Handler 
+/sample/guestbook/list.do=sample.guestbook.command.GetMessageListHandler
+/sample/guestbook/write.do=sample.guestbook.command.WriteMessageHandler
+/sample/guestbook/delete.do=sample.guestbook.command.DeleteMessageHandler
+/sample/guestbook/update.do=sample.guestbook.command.UpdateMessageHandler

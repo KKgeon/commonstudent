@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico"> -->
+<link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+
+<style>
+/* 링크태그에 스타일 지정하는 CSS 코딩  */
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+a:hover {
+	color: orange;
+/* 	text-transform: uppercase; */
+	text-transform: capitalize;
+/* 	text-decoration: underline overline line-through; */
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+	
+	
+	<!-- 절대 경로  -->	
+	<a href="http://localhost/webPro/html/days02/ex10_02.html#desc" target="_blank">책갈피 구현 설명 절대경로 [이동])</a><br>
+	<!-- 상대 경로  -->
+	<a href="ex10_02.html#desc" target="_blank">책갈피 구현 설명 상대경로 [이동])</a><br>
+<!--
+[html 링크]
+링크를 클릭하면 다른 문서로 이동하는 것.
+하이퍼링크
+링크 위로 마우스를 이동하면 마우스 화살표 -> 작은 손 모양으로 변한다
+링크는 텍스트, 이미지, 기타 html 요소일 수 있다.
+a 태그(링크태그)
+  -->
+  
+  <a href="http://www.naver.com">naver</a>
+  <br>
+  <a href="http://www.daum.net">daum</a>
+  <br>
+<!--   days01.ex01.html 페이지 링크 -->
+
+<!-- 절대경로 -->
+  <a href="http://localhost/webPro/html/days02/ex01.html">days02.ex01.html</a>
+  <br>
+<!--   상대경로 -->
+  <a href="/webPro/html/days02/ex01.html">days02.ex01.html</a>
+  <br>
+<!--   <a href="ex01.html">days02.ex01.html</a> -->
+<!--   <br> -->
+<!--   <a href="/ex01.html">days02.ex01.html - 안되게끔 해놓은것</a> -->
+  <a href="../days01/ex01.html" target="_blank">days01.ex01.html_blank</a>  <br>
+  <a href="../days01/ex01.html" target="_parent">days01.ex01.html_parent</a>  <br>
+  <a href="../days01/ex01.html" target="_top">days01.ex01.html_top</a>  <br>
+
+<br>
+<!--
+	1) 밑줄 + 보라색 : 방문한 링크
+	2) 밑줄 + 파랑색 : 방문하지 않은 링크
+	2) 밑줄 + 빨강색 : 방문하려고 클릭하는 순간의 링크
+  
+  
+  a 링크 태그의 target 속성 ? 링크된 문서를 열 위치를 지정하는 속성
+   1) _self		기본값
+   2) _blank	새 창(새 탭)을 열어서 문서를 연다.
+   3) _parent	부모(상위) 프레임에 문서를 연다.
+   4) _top		창 전체에서 문서를 연다
+   
+  -->
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+           나이를 저장하는 텍스트박스 선언
+           실행 버튼 선언
+           출력 demo  p 선언
+           
+           30살 이상   "old"
+                미만   "young"
+           출력하는 코딩.    
+        </xmp>
+        <!-- string -->
+        <input type="text" id="age" name="age" value="20">
+        <br>
+        <button>실행</button>
+        <p id="demo"></p>
+        
+        <script>
+           document.querySelector("button").onclick = ()=>{
+              let age =  document.querySelector("#age").value;
+              // "23" -> 23 형변환
+              // parseInt(), parseFloat() / Number()
+              if( !age.trim() ){
+                  alert("입력하세요.");
+                  return ;
+              }
+              
+              let result;
+              if( isNaN( age ) ){ // 참 숫자가 아니다. 
+                  result = "입력 잘못!!!"
+                  document.querySelector("#age").select();
+              }else{
+                  result = age >= 30 ? "old" : "young";
+              }    	
+              document.querySelector("#demo").innerHTML = result;
+           }
+        </script>
+        
+      </div>
+</body>
+
+</html>

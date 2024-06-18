@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+    [js 날짜/시간 - Date 객체]
+    java - Date, Calendar, LocalDate, LocalTime,
+  </xmp>
+</div>
+<script>
+    let d = new Date();
+    document.write(d+"<br>");
+    
+    d= new Date("2024-4-12");
+    document.write(d+"<br>");
+    document.write(d.toString() +"<br>");
+    document.write(d.toDateString() + "<br>");
+    document.write(d.toLocaleTimeString +"<br>");
+    document.write(d.toLocaleDateString +"<br>");
+
+</script>
+<script>
+    //[문제] 24.5.10 무슨 요일?
+    d=new Date(2024,5-1,10);
+    //1년 더하기
+    d.setFullYear(d.getFullYear()+1);
+    //1당 더하기
+    d.setMonth(d.getMonth()+1);
+    //1일 더하기
+    d.setDate(d.getDate()+1);
+
+    document.write(d.toLocaleDateString()+"<br>");
+
+</script>
+</body>
+</html>

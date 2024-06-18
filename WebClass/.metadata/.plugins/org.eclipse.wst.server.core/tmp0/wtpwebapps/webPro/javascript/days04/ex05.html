@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <div style="display: flex; justify-content: space-around;">
+            <input type="text" autofocus="autofocus">
+            +
+            <input type="text">
+            =
+            <input type="text" disabled="disabled">
+        </div>
+    </div>
+
+    <script>
+        const t1 = document.querySelector("div>input:nth-of-type(1)");
+        const t2 = document.querySelector("div>input:nth-of-type(2)");
+        const t3 = document.querySelector("div>input:nth-of-type(3)");
+
+
+        t1.onkeydown = function(){
+            // 이벤트 취소
+            // console.log(event.keyCode);
+            if (!(event.keyCode >=48 && event.keyCode<=59 || event.keyCode==13|| event.keyCode==8|| event.keyCode==229)) {
+                alert("숫자만써라")
+                event.returnValue = false;
+            }
+
+
+            if (event.keyCode == 13) {
+                t2.focus();
+            }
+        }
+
+
+        t2.onkeydown = function(){
+            if (event.keyCode == 13) {
+                let result = Number(t1.value) + Number(t2.value);
+                t3.value = result;
+            
+            t1.select();
+            }
+
+        }
+
+
+        // t1.onkeyup = function () {
+
+
+
+           
+        //     if (event.keyCode == 13) {
+        //         if (typeof t1.value === 'number') {
+        //                 alert("123");
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

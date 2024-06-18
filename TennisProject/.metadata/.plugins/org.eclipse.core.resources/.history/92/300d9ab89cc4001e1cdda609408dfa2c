@@ -1,0 +1,47 @@
+package tennisScoreView;
+
+public class TennisPlayer {
+	String name;
+	boolean gender;
+	int age;
+	
+	
+	
+	
+	
+	public TennisPlayer() {
+		super();
+	
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public boolean isGender() {
+		return gender;
+	}
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public TennisPlayer(String name, boolean gender, int age) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "TennisPlayer [name=" + name + ", gender=" + gender + ", age=" + age + "]";
+	}
+	
+	
+	
+}

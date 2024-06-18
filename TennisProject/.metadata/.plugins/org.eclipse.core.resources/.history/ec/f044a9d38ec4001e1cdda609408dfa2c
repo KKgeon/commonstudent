@@ -1,0 +1,88 @@
+package tennisScoreView;
+
+import java.util.Scanner;
+
+public class Print {
+	public static void main(String[] args) {
+        String[] score = {"0", "15", "30", "40", "advantage"};
+        String[] playerList = {"q", "w", "e", "r", "t"};
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("선수 번호 입력 : ");
+        int index = scanner.nextInt();
+        String player1 = playerList[index];
+        index = scanner.nextInt();
+        String player2 = playerList[index];
+
+        int scorePlayer1 = 0;
+        int scorePlayer2 = 0;
+
+        while (true) {
+            pointWinner(score, player1, player2, scorePlayer1, scorePlayer2);
+
+            // Check for Deuce
+            if (scorePlayer1 == 3 && scorePlayer2 == 3) {
+                System.out.println("듀스 상황!");
+                while (true) {
+                    pointWinner(score, player1, player2, scorePlayer1, scorePlayer2);
+                    if (Math.abs(scorePlayer1 - scorePlayer2) >= 2 && (scorePlayer1 >= 4 || scorePlayer2 >= 4)) {
+                        // One player won the Deuce
+                        break;
+                    }
+                }
+            }
+
+            finalGameScore(player1, player2, scorePlayer1, scorePlayer2);
+        }
+    }
+
+    private static void pointWinner(String[] score, String player1, String player2, int scorePlayer1, int scorePlayer2) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.printf("현재 스코어 - %s: %s, %s: %s\n", player1, score[scorePlayer1], player2, score[scorePlayer2]);
+
+            System.out.print("누가 이겼나 ( 1 / 2 )");
+            int p = scanner.nextInt();
+
+            if (p == 1) {
+                if (scorePlayer1 < 3) {
+                    scorePlayer1++;
+                } else if (scorePlayer1 == 3) {
+                    System.out.println(player1 + "이(가) 이겼습니다!");
+                    finalGameScore(player1, player2, scorePlayer1 + 1, scorePlayer2);
+                    scorePlayer1 = 0;
+                    scorePlayer2 = 0;
+                    
+                    break; // 현재 게임 종료 후 다음 게임 진행
+                }
+            } else if (p == 2) {
+                if (scorePlayer2 < 3) {
+                    scorePlayer2++;
+                } else if (scorePlayer2 == 3) {
+                    System.out.println(player2 + "이(가) 이겼습니다!");
+                    finalGameScore(player1, player2, scorePlayer1, scorePlayer2 + 1);
+                    scorePlayer1 = 0;
+                    scorePlayer2 = 0;
+                    break; // 현재 게임 종료 후 다음 게임 진행
+                }
+            } else {
+                System.out.println("잘못된 입력");
+                System.exit(0);
+            }
+
+            if ((scorePlayer1 == 4 && scorePlayer2 < 3) || (scorePlayer2 == 4 && scorePlayer1 < 3)) {
+                // Check for regular win or Deuce resolution
+                break;
+            }
+        }
+    }
+
+    private static void finalGameScore(String player1, String player2, int scorePlayer1, int scorePlayer2) {
+        int gameCount = 1;
+        System.out.printf("%d번째 게임 스코어 - %s: %s, %s: %s\n", gameCount++, player1, scorePlayer1, player2,scorePlayer2);
+    }
+
+    
+} // class

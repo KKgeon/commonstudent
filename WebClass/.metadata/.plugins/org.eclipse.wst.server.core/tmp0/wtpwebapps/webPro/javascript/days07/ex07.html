@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            https://www.json.org/json-en.html
+            [js JSON]
+            -JavaScript Object Notation
+            js 객체 표기법
+            -[경량] 데이터 교환 방식
+            서버 -> 데이터 송수신(교환) <-클라이언트 경량 XML 데이터 형식 ***JSON 데이터 형식 *** 예) 가족사항 - ex07.xml 가족사항 - 인간이 읽고 쓰는것은 쉽습니다. - 기계가
+                구문 분석하고 생성하는 것은 쉽습니다. - JSON은 완전이 언어 독립적인 텍스트 형식. - JSON은 2가지 구조 ㄴ 이름/값 한쌍=>컬렉션
+                - 순서가 지정된 값의 목록
+                - json object 선언 형식
+                { }
+        </xmp>
+    </div>
+    <script>
+        //1. js 객체 선언
+
+        // let person = {
+        //     name: "홍길동",
+        //     age: 20
+        // };
+
+        // let person = '{"name": "홍길동","age": 20}';
+    </script>
+
+    <script>
+        let emps = `{"employees":[
+            {"name": "홍길동","age": 20},
+            {"name": "홍길동","age": 20},
+            {"name": "홍길동","age": 20},
+            {"name": "홍길동","age": 20}
+        ]
+    }`;
+
+    //json 문자열 => js 객체로 변환
+    // JSON.parse(json 문자열)
+    let jsObjectEmps = JSON.parse(emps);
+
+
+    // js 객체 => json 문자열변환 ? json 라이브러리 사용
+    // JSP ajax 처리할 때 설명 ... 
+    </script>
+</body>
+
+</html>

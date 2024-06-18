@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+	pre {
+		border-left: 10px solid green;
+		border-bottom: 1px dotted gray;
+	}
+
+	h3 {
+		border-style: solid;
+		/* top right bottom left */
+		/* border-width: 10px 20px 30px 40px; */
+		/* border-width: 10px 10px 10px 10px; */
+		/* 위아래	양옆 */
+		border-width: 5px 50px;
+
+	}
+
+	p.demo {
+/* 
+		border-top-style: dotted;
+		border-right-style: solid;
+		border-bottom-style: dashed;
+		border-left-style: double; */
+
+		/* border-style: top solid dashed double; */
+		/* border-style: solid solid solid solid; */
+		/* border-style: dotted T/B solid L/R; */
+
+		border: 2px solid red;
+		padding: 10px;
+		/* 둥근 테두리 */
+		/* border-radius: 10px 10px 10px 10px; */
+		/* border-radius: 10px 20px 30px 40px; */
+		border-radius: 10px 50px;
+
+	}
+</style>
+
+<body>
+	<h3>CSS 테두리</h3>
+	<p class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum assumenda at unde nisi expedita,
+		exercitationem esse, numquam consectetur porro pariatur doloremque harum iusto necessitatibus. Ex pariatur in
+		animi error velit.</p>
+
+
+	<pre>
+[CSS border[테두리]]
+
+border-width:1px;
+border-style:solid; 지정하지 않으면
+border-color:gray;
+
+border:1px solid gray;
+</pre>
+	<p style="border-style: none;">테두리 X</p>
+	<p style="border-style: hidden;">숨겨진테두리 </p>
+	<p style="border-style: dotted; border-width: 1px;">점선테두리</p>
+	<p style="border-style: dashed; border-width: 1px;">대시테두리</p>
+	<p style="border-style: solid;">실선테두리</p>
+	<p style="border-style: double;">이중테두리</p>
+	<p style="border-style: groove;">3D테두리</p>
+	<p style="border-style: ridge;">3D 융기된 테두리</p>
+	<p style="border-style: inset;">3D 삽입된 테두리</p>
+	<p style="border-style: outset;">3D 아웃셋 테두리</p>
+
+
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quis velit consequuntur distinctio accusantium
+		totam fuga placeat earum. Nobis tempore atque sunt necessitatibus optio voluptate hic ut tempora sit quod!</div>
+</body>
+
+</html>

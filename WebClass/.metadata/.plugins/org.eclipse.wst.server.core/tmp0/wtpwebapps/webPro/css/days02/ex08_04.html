@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+   div.sticky_text{
+      border: 2px solid #4caf50;
+      background-color: #cae8ca;
+      padding: 3px;
+      text-align:center;
+      
+      position:sticky;
+      position:-webkit-sticky;
+      
+      top:0;
+      
+   }
+   
+   /* div:last-child{}
+   div:last-of-type{}
+   div:ntn-child(3) */ 
+   
+   div:nth-of-type(2){
+      padding-bottom: 2000px;
+      border:1px solid gray;
+   }
+</style>
+</head>
+<body>
+<!-- p>lorem^.stick_text>{hello world}^div>p*3>lorem -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sit fugit alias iusto enim inventore tenetur sed assumenda debitis beatae voluptates laboriosam maxime at iste impedit minus pariatur itaque eaque.</p>
+<div class="sticky_text">hello world</div>
+<div>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere magnam dignissimos iure aut excepturi eaque ratione enim pariatur aliquid ut quod saepe consequatur nulla vitae inventore cum quisquam reprehenderit quis.</p>
+   <p>Inventore at numquam perspiciatis pariatur similique repellendus architecto iure minima neque dignissimos repudiandae deserunt illum fuga alias aspernatur. Perferendis voluptate sequi est inventore eligendi qui? Vero non alias facere rerum.</p>
+   <p>Consequatur voluptate excepturi nihil voluptatem quibusdam eveniet labore dolorem reiciendis. Eveniet eum ratione ducimus beatae animi necessitatibus nostrum totam maiores. Eaque nostrum cum voluptatem sapiente doloribus id voluptates ducimus harum.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.box{
+border: 1px solid gray;
+width: 100px;
+height: 100px;
+text-align: center;
+}
+
+</style>
+
+<style>
+div:first-of-type{
+
+    background-color: green;
+    position: static;
+    /* 기본값 : 
+    항상 페이지의 일반적인 흐름에 다라 위치가 지정된다 */
+}
+
+div:nth-of-type(2){
+
+    background-color: yellow;
+    position: relative;
+    /* 
+        상대좌표
+        기준좌표 - 일반 위치
+        l,r,t,b 좌표
+    */
+    left: 20px;
+    top: 20px;
+}
+
+div:nth-of-type(3){
+
+    background-color: red;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+   
+}
+
+div:nth-of-type(4){
+
+    background-color: blue;
+    position: absolute;
+
+    left: 40px;
+    top: 25px;
+
+    z-index: -1;
+}
+
+</style>
+</head>
+<body>
+<script>
+
+    for (let i = 1; i <= 5; i++) {
+        const divElement= document.createElement("div");
+        divElement.innerText="Box-" + i;
+        divElement.className="box";
+        document.body.appendChild(divElement);
+        
+        
+    }
+</script>
+</body>
+</html>

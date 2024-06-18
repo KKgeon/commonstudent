@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+  <xmp class="code">  
+  </xmp>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ipsa laborum quam voluptatem enim repudiandae facere quae natus odio voluptate ab deleniti aspernatur temporibus accusamus vitae quaerat, similique ad maxime!</p>
+  <p>Fuga officia incidunt <span>quae</span> magnam, alias natus beatae cum hic cupiditate explicabo assumenda eum et facere deserunt necessitatibus ea doloremque. Dolor doloribus impedit distinctio atque cupiditate quaerat, enim asperiores ea?</p>
+  <p>Possimus consectetur mollitia voluptatibus esse officia omnis voluptatum natus obcaecati iste commodi quod doloribus consequuntur explicabo quis eum aut facere veritatis sunt, quisquam dicta corporis, optio exercitationem. Consequatur, illum laborum?</p>
+  <p>Id nostrum totam fugit facere quod blanditiis accusantium eum quia omnis labore tempore, magnam debitis perspiciatis praesentium asperiores officiis quo vero dicta quisquam consectetur officia sit! Omnis aspernatur quaerat adipisci?</p>
+  <p>Ducimus beatae commodi, quia odio sed delectus quod pariatur et expedita magnam amet temporibus vitae blanditiis eaque voluptatum! Atque sit laboriosam praesentium commodi minus necessitatibus possimus. Hic veniam autem porro!</p>
+</div>
+
+<script>
+    // $("p").css("color","red");
+
+
+    // $("p:has(span)").css("color","red");
+    // $("p").has("span").css("color","red");
+    
+    
+    // $("p:contains(beatae )").css("color","red");
+    $("div:not(:has(h1))").css("color","red");
+</script>
+</body>
+</html>

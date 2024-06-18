@@ -1,0 +1,53 @@
+package tennis_team_1;
+import java.io.IOException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Tenis extends GameMethod {
+
+	public static void main(String[] args) throws IOException {
+
+		Scanner scanner = new Scanner(System.in);
+		GameMethod g = new GameMethod(); //GameMethod 클래스 객체 g 생성
+		Player p = new Player(); //Player 클래스 객체 p 생성
+		String gender;
+
+		System.out.println();
+		System.out.println("\t\t\t"+"=".repeat(50));
+		System.out.println();
+		System.out.println("\t\t\t\t\t  테니스 게임");
+		System.out.println();
+		System.out.println("\t\t\t"+"=".repeat(50));
+		System.out.println();
+		System.out.println();
+
+		System.out.println("→ 계속하려면 엔터를 누르세요.");
+		System.in.read();
+		System.in.skip(System.in.available());
+		/*
+    char con ='e';
+    do {
+       con = (char)System.in.read();
+       System.in.skip(System.in.available());
+    } while (Character.toUpperCase(con)=='e');
+		 */
+		System.out.print("성별(남자,여자,혼합)을 입력하세요");
+		gender = scanner.next();
+
+
+		int set = g.getSet(gender);
+		boolean mode = g.getMode(gender);
+		Random rnd = new Random();
+		//ArrayList <String> team1totalscore = new ArrayList <String>();
+		boolean a= true;
+
+
+		String [][] playername = p.Inputplayer(mode);
+		p.getteam1player(playername);
+		p.getteam2player(playername);
+
+		while(a) {
+			g.pointWinner(rnd.nextInt(2)+1, set);
+		}
+	}
+}

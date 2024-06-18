@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+    </div>
+
+
+    <script>
+
+        /*
+                $("button").on("click", function () {
+                    let count = $(this).html();
+                    $(this).html(++count);
+                });
+        */
+    </script>
+
+    <script>
+        /*
+        let button1 = 2;
+        let button2 = 0;
+        let button3 = 1;
+          :
+        let button20 = 0;
+        */
+
+
+        // [js 배열]
+        // let counts = [0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+
+
+        //[js 함수 클로저 사용 ]이해...
+        /*
+                const btns = document.querySelectorAll("button");
+                for (let i = 0; i < btns.length; i++) {
+                    btns[i].onclick = (function () {//add()
+                        let count = 0;
+                        return function () {//plus()
+                            event.srcElement.innerHTML = ++count;
+                        };
+                    })();
+        
+                }
+        */
+        //jquery            btns[i].onclick = (function () {//add()
+        $("button").on("click", function () {
+            let count = 0;
+            return function () {//plus()
+                event.srcElement.innerHTML = ++count;
+            };
+        })
+
+
+    </script>
+</body>
+
+</html>

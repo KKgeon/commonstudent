@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../resources/cdn-main/example.css">
+  <script src="../../resources/cdn-main/example.js"></script>
+  <style>
+    span.material-symbols-outlined {
+      vertical-align: text-bottom;
+    }
+  </style>
+</head>
+
+<body onload="init();">
+  <header>
+    <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+        style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt="">
+    </h1>
+    <ul>
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+  </header>
+  <div>
+    <xmp class="code">
+
+    </xmp>
+
+    <button>Turn ON</button>
+    <button>Turn OFF</button>
+    <br>
+    <!-- <img src="../images/pic_bulboff.gif" alt=""> -->
+    <!-- 12:03 수업시작 -->
+  </div>
+
+  <script>
+
+    // body > div > button:nth-child(2)
+    // body > div > button:nth-of-type(2)
+    
+    const btnOn = document.querySelector("body > div > button:first-of-type");
+    const btnOff = document.querySelector("body > div > button:last-of-type");
+  
+    let bulbImg ;
+    
+    function init(){ 
+      // 1. [전구 이미지 요소를 생성해서 div의 자식요소로 추가]
+      bulbImg = document.createElement("img"); // <img src="" alt="">
+      // src 속성 추가.
+      bulbImg.setAttribute("src", "../images/pic_bulboff.gif");
+      // alt 속성 추가.
+      bulbImg.setAttribute("alt", "blub"); 
+      document.querySelector("body > div").appendChild(bulbImg);
+  
+      // 2. [전구 켜는 버튼은 활성화]
+      // btnOff.disabled = true;  
+      btnOff.style.display = "none";
+    }
+  
+    btnOn.addEventListener("click", function (){
+      /*
+      // 1. img src="bulbon.gif"
+      // bulbImg.src = "";
+      bulbImg.setAttribute("src", "../images/pic_bulbon.gif");
+      
+      // 2. Turn Off 버튼을 보이게 하고, Turn On 버튼은 숨기기.
+      btnOff.style.display = "inline";
+      btnOn.style.display = "none";
+      */
+      bulb_onoff("on");
+    });
+    
+    btnOff.addEventListener("click", function (){	    
+      /*  
+      bulbImg.setAttribute("src", "../images/pic_bulboff.gif");	    
+      btnOff.style.display = "none";
+      btnOn.style.display = "inline";
+      */
+      bulb_onoff("off");
+    });
+    
+    function bulb_onoff(onoff){
+      bulbImg.setAttribute("src", `../images/pic_bulb${onoff}.gif`);
+      
+      // java : if( onoff.equals("on") )
+      
+      btnOff.style.display = onoff=="on"?"inline": "none";
+      btnOn.style.display  = onoff=="on"?"none" : "inline";
+    }
+  </script>
+</body>
+
+</html>

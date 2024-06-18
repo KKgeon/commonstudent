@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+   vertical-align: text-bottom;
+ }
+
+</style>
+</style>
+
+<style>
+  #container{
+    width:400px;
+    height:400px;
+    position:relative;
+    background-color:yellow;
+  }
+  #animate{
+    width:50px;
+    height:50px;    
+     position:absolute;    
+    background-color:red;
+    border-radius: 50%;
+  }
+</style>
+
+</head>
+<body>
+<header>
+ <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#" style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico" alt=""></h1>
+<ul>
+<li><a href="#">로그인</a></li>
+<li><a href="#">회원가입</a></li>
+</ul>
+</header>
+<div>
+    <xmp class="code">
+      
+    </xmp>
+    
+    <button onclick="myMove();">Click Me</button>
+    
+     <br>
+     <br>
+     
+     <div id="container">
+        <div id="animate"></div>
+     </div>
+    
+    
+  </div>
+
+  <script>
+    function myMove(){
+       var elem = document.getElementById("animate");
+       // left, top
+       var pos = 0;   // 지역변수(전역변수)   
+       var timer = setInterval( function (){  // 중첩함수
+          if(pos == 350){
+             clearInterval(timer);
+          }else{
+             pos++;
+             elem.style.left = pos +"px";
+             elem.style.top = pos +"px";
+          }
+       } , 10);
+    }
+  </script>
+  
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+            [js 컬렉션 객체]
+            1. option 컬렉션
+            2. arguments 컬렉션
+            3. forms 컬렉션
+
+            4. elements
+            5. images
+            6. links
+        </xmp>
+        <form id="form1" name="form1" action="">
+            Name : <input type="text" name="name" value="admin" />
+            <br>
+            Age : <input type="text" name="age" value="20" />
+            <br>
+            Email : <input type="email" name="email" value="admin@naver.com" />
+            <button type="button" value="ok">확인</button>
+        </form>
+
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        $("button").on("click", function () {
+            const form1 = document.forms["form1"];
+            for (const elemt of form1.elements) {
+                $("#demo").html(function (index, oldHtml) {
+                    return oldHtml + `<br>${elemt.value}`;
+                });
+
+            }//for
+
+        });
+    </script>
+</body>
+
+</html>

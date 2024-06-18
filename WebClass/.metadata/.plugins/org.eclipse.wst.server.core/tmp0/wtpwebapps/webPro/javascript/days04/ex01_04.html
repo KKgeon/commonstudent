@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+    <script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+    <style>
+        span.material-symbols-outlined {
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main"><img src="http://localhost/webPro/images/favicon.ico" alt=""><a href="#"
+                style="position:absoute;top:30px;">bonobono</a><img src="http://localhost/webPro/images/favicon.ico"
+                alt=""></h1>
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+    <div>
+        <xmp class="code">
+        </xmp>
+    </div>
+    <script>
+        //ES5
+        /*
+        var x = function(a,b){
+            return a+b;
+        }
+        */
+        //ES6 화살표 연산자, 람다식 =>
+        var x = (a, b) => a + b;
+        var x = (a, b) => {
+            return a + b;
+        }
+        // this X
+        // IE11 이하 X
+        // 화살표 함수는 호이스팅 되지 않는다.
+    </script>
+
+    <script>
+        //1. js 함수 정의 시 매개변수의 자료형 X
+        /*
+        function test(let x, let y){
+            
+        }
+        function test(x, y){
+
+        }
+        */
+        //2. 매개변수 확인 X
+        //3. undefined
+        /*
+        function text(x, y) {
+            if (y == undefined) y=0;
+        }
+        test(100);
+
+        //4. 매개변수의 초기값을 할당할 수 있다.
+        function test(x=100,y=0){
+
+        }
+        */
+    </script>
+</body>
+
+</html>
